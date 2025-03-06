@@ -8,6 +8,8 @@ public class Guideline : MonoBehaviour
     public LineRenderer lineRenderer;
     public GameObject triggerPrefab;
     private List<Transform> triggers = new List<Transform>();
+    
+    private Ingredient ingredient; // parent ingredient
     public bool done = false;
 
     public float triggerRadius = 0.5f;
@@ -28,6 +30,10 @@ public class Guideline : MonoBehaviour
             trigger.GetComponent<CircleCollider2D>().radius = triggerRadius;
             triggers.Add(trigger.transform);
         }
+
+        var obj = GetComponentInParent<Ingredient>();
+        if (obj != null)
+            ingredient = obj;
     }
 
     void Update()
@@ -46,7 +52,7 @@ public class Guideline : MonoBehaviour
         if (triggers[currentTargetTrigger] == trigger) {
             if (currentTargetTrigger + 1 >= triggers.Count) {
                 done = true;
-                Destroy(gameObject); // TODO: This should increment the current guideline in the ingredient 
+                ingredient.MarkGuidelineAsCompleted();
                 return;
             }
             currentTargetTrigger++;
