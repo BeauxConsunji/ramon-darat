@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TimingInstruction : MonoBehaviour
 {
-    public enum Type { Ingredient, Heat };
-    public Draggable.KnobSetting targetHeatLevel = HeatLevel.None;
-    public float timeStart;
+    public enum Type { None, Ingredient, Heat };
+    public Type type = Type.None;
+    public HeatLevel targetHeatLevel = HeatLevel.None;
+    public float startTime;
     public float duration;
-    public int points;
+    public int points = 1;
 }
