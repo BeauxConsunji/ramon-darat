@@ -31,11 +31,11 @@ public class PitcherScript : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0f, 0f, z);
     }
 
-    public float getZ()
+    public float GetZ()
     {
         return z;
     }
-    public bool isPouring()
+    public bool IsPouring()
     {
         return isPressed;
     }

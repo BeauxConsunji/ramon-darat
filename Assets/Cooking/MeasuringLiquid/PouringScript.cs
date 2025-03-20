@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PouringScript : MonoBehaviour
 {
+    public Transform PitcherTip;
     public PitcherScript pitcher;
-    public waterScript water;
-    private float maxHeight = 1.65f;
+    public WaterScript water;
+    private float maxHeight = 3f;
     private float height;
     private float maxThickness = 0.05f;
     private float thickness;
@@ -14,13 +15,16 @@ public class PouringScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(pitcher.getZ() >= 10 && pitcher.isPouring())
+        // make it so that the pouring water will always follow where the pitcher's tip is
+        transform.position = PitcherTip.position;
+
+        if (pitcher.GetZ() >= 10 && pitcher.IsPouring())
         {
             //transform.localPosition = new Vector3(-0.9315586f, 1.432687f, 0);
             if (thickness >= maxThickness)
@@ -38,7 +42,7 @@ public class PouringScript : MonoBehaviour
             
 
         }
-        else if(pitcher.getZ() <= 20 && !pitcher.isPouring())
+        else if(pitcher.GetZ() <= 20 && !pitcher.IsPouring())
         {
             
             if (thickness < 0)
@@ -65,7 +69,7 @@ public class PouringScript : MonoBehaviour
 
     }
 
-    public float getThickness()
+    public float GetThickness()
     {
         return thickness;
     }
