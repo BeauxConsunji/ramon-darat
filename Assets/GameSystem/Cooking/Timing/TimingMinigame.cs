@@ -7,7 +7,6 @@ public class TimingMinigame : MonoBehaviour
     public float startTime = 0.0f;
     public List<TimingInstruction> instructions = new List<TimingInstruction>();
     public int currentInstruction = 0;
-    public int score = 0;
     public bool done = false;
     public Draggable stoveKnob;
     public HeatLevel heatLevel;
@@ -15,22 +14,39 @@ public class TimingMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.time;
         foreach (var instruction in GetComponentsInChildren<TimingInstruction>()) {
             instructions.Add(instruction);
             instruction.gameObject.SetActive(false);
         }
+        InitializeUI();
+    }
+    void InitializeUI() {
+        G.UI.timingMinigame.instructions.Clear();
+
+        foreach (var instruction in instructions) {
+            G.UI.timingMinigame.AddInstruction(new UITimingInstructionState() {
+                startTime = instruction.startTime,
+                duration = instruction.duration,
+                instruction = instruction.instruction,
+
+            });
+        }
+        G.UI.MarkModified();
     }
 
     void OnEnable() {
         startTime = Time.time;
+        G.UI.timingMinigame.startTime = startTime;
+        InitializeUI();
     }
 
     // Update is called once per frame
     void Update()
     {
         var instruction = instructions[currentInstruction];
-        if (instruction.startTime <= Time.time) {
-            if (instruction.startTime + instruction.duration <= Time.time) {
+        if (startTime + instruction.startTime <= Time.time) {
+            if (startTime + instruction.startTime + instruction.duration <= Time.time) {
                 NextInstruction();
             } else {
                 instruction.gameObject.SetActive(true);
@@ -51,7 +67,11 @@ public class TimingMinigame : MonoBehaviour
     public void MarkInstructionAsCompleted() {
         if (done) return;
         NextInstruction();
-        score++;
+        // G.UI.timingMinigame.instructions[currentInstruction].done = true;
+        // G.UI.timingMinigame.instructions[currentInstruction].MarkModified();
+        
+        G.UI.timingMinigame.score++;
+        G.UI.timingMinigame.MarkModified();
     }
 
     public void ChangeHeatLevel(HeatLevel heatLevel) {
@@ -62,7 +82,8 @@ public class TimingMinigame : MonoBehaviour
         if (instructions[currentInstruction].type == TimingInstruction.Type.Heat && instructions[currentInstruction].targetHeatLevel == heatLevel) {
             MarkInstructionAsCompleted();
         } else {
-            score--;
+            G.UI.timingMinigame.score--;
+            G.UI.timingMinigame.MarkModified();
         }
     }
 }

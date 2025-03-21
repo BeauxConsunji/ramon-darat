@@ -10,4 +10,5 @@ public class TimingInstruction : MonoBehaviour
     public float startTime;
     public float duration;
     public int points = 1;
+    public string instruction = "";
 }
