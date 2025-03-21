@@ -9,6 +9,7 @@ public class Ingredient : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public int currentGuideline = 0;
     public bool done = false;
+    public TimingMinigame minigame; // drag the component in unity inspector
 
     void Start()
     {
@@ -21,13 +22,14 @@ public class Ingredient : MonoBehaviour
         
         if (sprites.Count > 0)
             spriteRenderer.sprite = sprites[0];
-    }
+    } 
 
     public void MarkGuidelineAsCompleted() {
         if (done) return;
         if (currentGuideline + 1 >= guidelines.Count) {
             done = true;
-            Destroy(gameObject); // TODO: This should proceed to the next minigame
+            if (minigame != null)
+                minigame.MarkInstructionAsCompleted();
             return;
         }
         guidelines[currentGuideline].gameObject.SetActive(false);

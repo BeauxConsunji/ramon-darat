@@ -9,6 +9,7 @@ public enum UIType {
     MainMenu,
     Cutscene,
     RecipeSelector,
+    TimingMinigame,
 }
 
 public class UIState
@@ -73,6 +74,7 @@ public class UIMainState : UIState {
 
     public UIType uiType;
     public UIRecipeSelectorState recipeSelector;
+    public UITimingMinigameState timingMinigame;
 }
 
 public class UIMain : UIView<UIMainState> {
@@ -80,6 +82,7 @@ public class UIMain : UIView<UIMainState> {
     // e.g. public UIMainMenu menu;
     public UIRecipeSelector recipeSelector;
     public UIMainMenu mainMenu;
+    public UITimingMinigame timingMinigame;
 
     public override void ApplyNewStateInternal()
     {
@@ -87,6 +90,7 @@ public class UIMain : UIView<UIMainState> {
         // e.g. menu.gameObject.SetActive(state.uiType == UIType.Menu);
         recipeSelector.gameObject.SetActive(state.uiType == UIType.RecipeSelector);
         mainMenu.gameObject.SetActive(state.uiType == UIType.MainMenu);
+        timingMinigame.gameObject.SetActive(state.uiType == UIType.TimingMinigame);
     }
     public override void UpdateChildren() {
         // TODO: set the state of each UI type
@@ -96,6 +100,9 @@ public class UIMain : UIView<UIMainState> {
 
         recipeSelector.state = state.recipeSelector;
         recipeSelector.ApplyNewState();
+
+        timingMinigame.state = state.timingMinigame;
+        timingMinigame.ApplyNewState();
     }
     public static UIMainState DefaultState() {
         return new UIMainState {
@@ -112,6 +119,9 @@ public class UIMain : UIView<UIMainState> {
                     // new UIRecipeState { name = "Adobo"}
                 } 
                 
+            },
+            timingMinigame = new UITimingMinigameState() {
+                instructions = new List<UITimingInstructionState>()
             }
             
             // { recipes = new List<UIRecipestate> { new UIRecipeState { name = "Adobo"}}}

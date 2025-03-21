@@ -29,7 +29,7 @@ public class UIRecipe : UIView<UIRecipeState>
 
     public void SelectRecipe() {
         Debug.Log("Clicked");
-        G.UI.uiType = UIType.HUD;
+        G.UI.uiType = UIType.TimingMinigame; // temporary
         G.UI.MarkModified();
     }
 }
