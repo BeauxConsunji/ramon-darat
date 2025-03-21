@@ -109,12 +109,12 @@ public class UIMain : UIView<UIMainState> {
             uiType = UIType.MainMenu,
             recipeSelector = new UIRecipeSelectorState() {
                 recipes = new List<UIRecipeState>() {
-                    new UIRecipeState() { name = "Rice", description = "staple"},
-                    new UIRecipeState() { name = "Adobo", description = "Manok"},
-                    new UIRecipeState() { name = "Pinakbet", description = "Gulay"},
-                    new UIRecipeState() { name = "Sinigang", description = "Maasim"},
-                    new UIRecipeState() { name = "Kare-Kare", description = "Peanut Butter"},
-                    new UIRecipeState() { name = "Halo-Halo", description = "Matamis"},
+                    new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Adobo", description = "Manok", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Pinakbet", description = "Gulay", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Sinigang", description = "Maasim", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Kare-Kare", description = "Peanut Butter", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Halo-Halo", description = "Matamis", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
 
                     // new UIRecipeState { name = "Adobo"}
                 } 

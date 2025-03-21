@@ -8,8 +8,6 @@ public enum HeatLevel {None, Low, Medium, High};
 public class Draggable : MonoBehaviour
 {
     public enum Type { None, Knife, Stirrer, Skin, Ingredient, Knob }
-    
-
     public Type type = Type.None;
     public float knobRange = 2.0f;
     private Plane dragPlane;
@@ -26,7 +24,6 @@ public class Draggable : MonoBehaviour
     void OnMouseDown() {
         dragPlane = new Plane(G.I.mainCamera.transform.forward, transform.position);
         Ray camRay = G.I.mainCamera.ScreenPointToRay(Input.mousePosition);
-
         float planeDist;
         dragPlane.Raycast(camRay, out planeDist);
         offset = transform.position - camRay.GetPoint(planeDist);
@@ -34,7 +31,6 @@ public class Draggable : MonoBehaviour
     }
     void OnMouseDrag() {
         Ray camRay = G.I.mainCamera.ScreenPointToRay(Input.mousePosition);
-
         float planeDist;
         dragPlane.Raycast(camRay, out planeDist);
         var dragPoint = camRay.GetPoint(planeDist);
