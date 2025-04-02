@@ -11,6 +11,7 @@ public class UIRecipeState : UIState {
     public string name;
     public string description;
     public Sprite thumbnail;
+    public string gameObjectId;
 }
 public class UIRecipe : UIView<UIRecipeState>
 {
@@ -31,5 +32,8 @@ public class UIRecipe : UIView<UIRecipeState>
         Debug.Log("Clicked");
         G.UI.uiType = UIType.TimingMinigame; // temporary
         G.UI.MarkModified();
+        if (G.I.TryGetGameObjectById(state.gameObjectId, out var recipe)) {
+            recipe.SetActive(true);
+        }
     }
 }

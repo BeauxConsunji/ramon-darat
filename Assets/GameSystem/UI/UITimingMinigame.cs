@@ -23,7 +23,7 @@ public class UITimingMinigame : UIView<UITimingMinigameState>
     public RectTransform rectTransform;
 
     public float offset = 50.0f; // offset from the left which indicates the current time
-    public float widthInSeconds = 30.0f; // the width of the timeline is equivalent to how many seconds
+    public float widthInSeconds = 8.0f; // the width of the timeline is equivalent to how many seconds
     public float pixelsPerSecond { get { return G.I.GetAbsoluteSize(rectTransform).x / widthInSeconds; }}
 
     void Start()

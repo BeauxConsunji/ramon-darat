@@ -151,7 +151,7 @@ MonoBehaviour:
   timeline: {fileID: 7889196884354225961}
   rectTransform: {fileID: 1081924625601694820}
   offset: 100
-  widthInSeconds: 30
+  widthInSeconds: 8
 --- !u!1 &5825581831770317210
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 99.99998, y: -385.45206}
+  m_AnchoredPosition: {x: 100.000015, y: -440.3141}
   m_SizeDelta: {x: 20, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3042984183222071467
