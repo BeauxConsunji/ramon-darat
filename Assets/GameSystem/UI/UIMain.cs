@@ -10,6 +10,7 @@ public enum UIType {
     Cutscene,
     RecipeSelector,
     TimingMinigame,
+    LoadingScreen,
 }
 
 public class UIState
@@ -75,6 +76,7 @@ public class UIMainState : UIState {
     public UIType uiType;
     public UIRecipeSelectorState recipeSelector;
     public UITimingMinigameState timingMinigame;
+    public UIRecipeState loadingScreen;
 }
 
 public class UIMain : UIView<UIMainState> {
@@ -83,6 +85,7 @@ public class UIMain : UIView<UIMainState> {
     public UIRecipeSelector recipeSelector;
     public UIMainMenu mainMenu;
     public UITimingMinigame timingMinigame;
+    public UILoadingScreen loadingScreen;
 
     public override void ApplyNewStateInternal()
     {
@@ -91,6 +94,7 @@ public class UIMain : UIView<UIMainState> {
         recipeSelector.gameObject.SetActive(state.uiType == UIType.RecipeSelector);
         mainMenu.gameObject.SetActive(state.uiType == UIType.MainMenu);
         timingMinigame.gameObject.SetActive(state.uiType == UIType.TimingMinigame);
+        loadingScreen.gameObject.SetActive(state.uiType == UIType.LoadingScreen);
     }
     public override void UpdateChildren() {
         // TODO: set the state of each UI type
@@ -103,13 +107,16 @@ public class UIMain : UIView<UIMainState> {
 
         timingMinigame.state = state.timingMinigame;
         timingMinigame.ApplyNewState();
+
+        loadingScreen.state = state.loadingScreen;
+        loadingScreen.ApplyNewState();
     }
     public static UIMainState DefaultState() {
         return new UIMainState {
             uiType = UIType.MainMenu,
             recipeSelector = new UIRecipeSelectorState() {
                 recipes = new List<UIRecipeState>() {
-                    new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="RiceMinigame"},
+                    new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="RiceMinigame", loadingScreenInstruction="Follow the instructions at the right time.", loadingScreenImage = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Adobo", description = "Manok", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Pinakbet", description = "Gulay", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Sinigang", description = "Maasim", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
