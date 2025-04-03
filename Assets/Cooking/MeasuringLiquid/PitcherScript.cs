@@ -11,7 +11,6 @@ public class PitcherScript : MonoBehaviour
     public float rotateSpeed = 30f;
     private float z;
     private bool isPressed;
-    //private bool canPour;
 
     // for mouse controls
     private bool dragging = false;
@@ -26,6 +25,7 @@ public class PitcherScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log("IS PRESSED: " + isPressed);
         // pouring
         Debug.Log(pouringArea.CanPourChecker());
         if (pouringArea.CanPourChecker())

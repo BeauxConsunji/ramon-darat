@@ -21,7 +21,7 @@ public class PouringAreaScript : MonoBehaviour
     // don't allow pouring unless pitcher is in a pouring area
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //Debug.Log("IS THIS THING ON????");
+        // Layer 7 = Pitcher
         if (collision.gameObject.layer == 7)
         {
             canPour = true;
@@ -31,7 +31,7 @@ public class PouringAreaScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //Debug.Log("IS THIS THING ON????");
+        // Layer 7 = Pitcher
         if (collision.gameObject.layer == 7)
         {
             canPour = false;
