@@ -4,30 +4,27 @@ using UnityEngine;
 
 public class GuideScript : MonoBehaviour
 {
-    public GameObject message; // temporary and for logic testing
-    private bool rightAmount;
+    public GameObject passMessage; // temporary and for logic testing
+    public GameObject failMessage;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        passMessage.SetActive(false);
+        failMessage.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rightAmount) {
-            message.SetActive(true);
-        }
-        else {
-            message.SetActive(false);
-        }
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         // Layer 4 = Water
         if (collision.gameObject.layer == 4)
         {
-            rightAmount = true;
+            passMessage.SetActive(true);
         }
     }
 
@@ -36,7 +33,8 @@ public class GuideScript : MonoBehaviour
         // Layer 4 = Water
         if (collision.gameObject.layer == 4)
         {
-            rightAmount = false;
+            passMessage.SetActive(false);
+            failMessage.SetActive(true);
         }
     }
 }
