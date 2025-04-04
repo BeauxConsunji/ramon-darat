@@ -11,10 +11,7 @@ public class PitcherScript : MonoBehaviour
     public float rotateSpeed = 30f;
     private float z;
     private bool isPressed;
-
-    // for mouse controls
-    private bool dragging = false;
-    private Vector3 offset;
+    private bool canPour;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +24,7 @@ public class PitcherScript : MonoBehaviour
     {
         Debug.Log("IS PRESSED: " + isPressed);
         // pouring
-        Debug.Log(pouringArea.CanPourChecker());
-        if (pouringArea.CanPourChecker())
+        if (canPour)
         {
             if (Input.GetKey(KeyCode.Space) && z < 90)
             {
@@ -44,11 +40,6 @@ public class PitcherScript : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0f, 0f, z);
         }
 
-        // mouse dragging
-        if (dragging) { 
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;            
-        }
-
     }
 
     // set pouring controls
@@ -61,17 +52,21 @@ public class PitcherScript : MonoBehaviour
         return isPressed;
     }
 
-    // set mouse dragging controls
-    private void OnMouseDown()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("You are clicking me baby");
-        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        dragging = true;
+        if (collision.gameObject.name == "PouringAreaTrigger")
+        {
+            canPour = true;
+            Debug.Log("u can pour now");
+        }
     }
 
-    private void OnMouseUp() 
-    { 
-        dragging = false;
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "PouringAreaTrigger")
+        {
+            canPour = false;
+        }
     }
-    
+
 }

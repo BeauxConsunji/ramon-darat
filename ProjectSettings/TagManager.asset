@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PouringArea
   - Pitcher
+  - Bigas
+  - PitcherPourLimit
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - PouringArea
   - Pitcher
   - Guide
-  - 
-  - 
+  - RiceCup
+  - Bigas
   - 
   - 
   - 

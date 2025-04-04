@@ -2,34 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PouringAreaScript : MonoBehaviour
+public class PouringLimitScript : MonoBehaviour
 {
-    private bool canPour;
+    private bool canGetRice;
 
     // don't allow pouring unless pitcher is in a pouring area
     private void OnTriggerStay2D(Collider2D collision)
     {
-        // Layer 7 = Pitcher
-        if (collision.gameObject.layer == 7)
+        // Layer 9 = RiceCup
+        if (collision.gameObject.layer == 9)
         {
-            canPour = true;
-            Debug.Log("You can pour now baby");
+            canGetRice = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // Layer 7 = Pitcher
-        if (collision.gameObject.layer == 7)
+        // Layer 9 = RiceCup
+        if (collision.gameObject.layer == 9)
         {
-            canPour = false;
-            Debug.Log("CAN'T POUR ANYMORE BOZO");
+            canGetRice = false;
         }
     }
 
-    public bool CanPourChecker()
+    public bool CanGetRiceChecker()
     {
-        if (canPour)
+        if (canGetRice)
         {
             return true;
         }

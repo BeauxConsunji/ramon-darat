@@ -22,7 +22,7 @@ public class GuideScript : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         // Layer 4 = Water
-        if (collision.gameObject.layer == 4)
+        if (collision.gameObject.name == "Water")
         {
             passMessage.SetActive(true);
         }
@@ -31,7 +31,7 @@ public class GuideScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // Layer 4 = Water
-        if (collision.gameObject.layer == 4)
+        if (collision.gameObject.name == "Water")
         {
             passMessage.SetActive(false);
             failMessage.SetActive(true);
