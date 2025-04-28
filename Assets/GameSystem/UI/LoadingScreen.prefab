@@ -466,7 +466,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3377431320830934206}
         m_TargetAssemblyTypeName: UILoadingScreen, Assembly-CSharp
-        m_MethodName: StartRecipe
+        m_MethodName: StartMinigame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -533,7 +533,7 @@ MonoBehaviour:
     description: 
     thumbnail: {fileID: 0}
     gameObjectId: 
-    loadingScreenImage: {fileID: 0}
-    loadingScreenInstruction: 
+    minigames: []
+    currentMinigame: 0
   instructions: {fileID: 4993653879107710038}
   img: {fileID: 5582717794742107662}

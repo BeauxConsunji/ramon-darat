@@ -10,16 +10,19 @@ public class UILoadingScreen : UIView<UIRecipeState>
     public Image img;
 
     public override void ApplyNewStateInternal() {
-        instructions.text = state.loadingScreenInstruction;
-        img.sprite = state.loadingScreenImage;
+        if (state.minigames.Count > 0) {
+            instructions.text = state.minigames[state.currentMinigame].loadingScreenText;
+            img.sprite = state.minigames[state.currentMinigame].loadingScreenImage;
+        }
     }
 
-    public void StartRecipe() {
+    public void StartMinigame() {
         Debug.Log("Clicked");
-        G.UI.uiType = UIType.TimingMinigame; // temporary
-        G.UI.MarkModified();
-        if (G.I.TryGetGameObjectById(state.gameObjectId, out var recipe)) {
-            recipe.SetActive(true);
+
+        G.UI.uiType = state.minigames[state.currentMinigame].type == Minigame.Type.Timing ? UIType.TimingMinigame : UIType.HUD;
+        if (G.I.TryGetGameObjectById(state.minigames[state.currentMinigame].gameObjectId, out var minigame)) {
+            minigame.SetActive(true);
         }
+        G.UI.MarkModified();
     }
 }

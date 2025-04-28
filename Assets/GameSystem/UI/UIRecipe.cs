@@ -12,8 +12,13 @@ public class UIRecipeState : UIState {
     public string description;
     public Sprite thumbnail;
     public string gameObjectId;
-    public Sprite loadingScreenImage;
-    public string loadingScreenInstruction;
+    public List<UIMinigameState> minigames = new List<UIMinigameState>();
+    public int currentMinigame = 0;
+
+    public void AddMinigame(UIMinigameState minigame) {
+        minigames.Add(minigame);
+        MarkModified();
+    }
 }
 public class UIRecipe : UIView<UIRecipeState>
 {
@@ -33,8 +38,12 @@ public class UIRecipe : UIView<UIRecipeState>
     public void SelectRecipe() {
         Debug.Log("Clicked");
         G.UI.uiType = UIType.LoadingScreen;
-        G.UI.loadingScreen = state;
-        G.UI.loadingScreen.MarkModified();
+        G.UI.recipe = state;
+        G.UI.recipe.MarkModified();
         G.UI.MarkModified();
+
+        if (G.I.TryGetGameObjectById(state.gameObjectId, out var recipe)) {
+            recipe.SetActive(true);
+        }
     }
 }

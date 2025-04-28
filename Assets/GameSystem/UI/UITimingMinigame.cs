@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class UITimingMinigameState : UIState {
+public class UITimingMinigameState : UIMinigameState {
     public List<UITimingInstructionState> instructions = new List<UITimingInstructionState>();
     public int score;
     public float startTime;

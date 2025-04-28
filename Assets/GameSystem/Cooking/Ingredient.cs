@@ -9,7 +9,7 @@ public class Ingredient : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public int currentGuideline = 0;
     public bool done = false;
-    public TimingMinigame minigame; // drag the component in unity inspector
+    public Minigame minigame; // drag the component in unity inspector
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class Ingredient : MonoBehaviour
         if (currentGuideline + 1 >= guidelines.Count) {
             done = true;
             if (minigame != null)
-                minigame.MarkInstructionAsCompleted();
+                minigame.MarkCompleted();
             return;
         }
         guidelines[currentGuideline].gameObject.SetActive(false);

@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimingMinigame : MonoBehaviour
+public class TimingMinigame : Minigame
 {
     public float startTime = 0.0f;
     public List<TimingInstruction> instructions = new List<TimingInstruction>();
     public int currentInstruction = 0;
-    public bool done = false;
     public Draggable stoveKnob;
     public HeatLevel heatLevel;
 
@@ -64,7 +63,7 @@ public class TimingMinigame : MonoBehaviour
         currentInstruction++;
     }
 
-    public void MarkInstructionAsCompleted() {
+    public override void MarkCompleted() {
         if (done) return;
         NextInstruction();
         // G.UI.timingMinigame.instructions[currentInstruction].done = true;
@@ -80,7 +79,7 @@ public class TimingMinigame : MonoBehaviour
         
         this.heatLevel = heatLevel;
         if (instructions[currentInstruction].type == TimingInstruction.Type.Heat && instructions[currentInstruction].targetHeatLevel == heatLevel) {
-            MarkInstructionAsCompleted();
+            base.MarkCompleted();
         } else {
             G.UI.timingMinigame.score--;
             G.UI.timingMinigame.MarkModified();

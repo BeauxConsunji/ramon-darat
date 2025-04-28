@@ -14,11 +14,11 @@ public class Draggable : MonoBehaviour
     private Vector3 originalPosition;
     private Vector3 offset;
     private int settingsCount;
-    private TimingMinigame minigame;
+    private TimingMinigame timingMinigame;
 
     void Start() {
         settingsCount = HeatLevel.GetNames(typeof(HeatLevel)).Length;
-        minigame = GetComponentInParent<TimingMinigame>();
+        timingMinigame = GetComponentInParent<TimingMinigame>();
     }
 
     void OnMouseDown() {
@@ -45,8 +45,8 @@ public class Draggable : MonoBehaviour
     void OnMouseUp() {
         if (type == Type.Knob) {
             var settingIndex = settingsCount - 1 - Mathf.Floor((transform.rotation.z + 1) * (settingsCount-2) / 2.0f);
-            if (minigame != null)
-                minigame.ChangeHeatLevel((HeatLevel)(settingIndex));
+            if (timingMinigame != null)
+                timingMinigame.ChangeHeatLevel((HeatLevel)(settingIndex));
         }
     }
 }
