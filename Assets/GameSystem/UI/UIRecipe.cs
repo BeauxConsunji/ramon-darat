@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,17 +15,21 @@ public class UIRecipeState : UIState {
 public class UIRecipe : UIView<UIRecipeState>
 {
     public TMPro.TextMeshProUGUI name;
+    public TMPro.TextMeshProUGUI description;
+    public Image img;
 
     // TODO: sprite for locked
     public override void ApplyNewStateInternal() {
         name.text = state.name;
+        description.text = state.description;
+        img.sprite = state.thumbnail;
 
         // TODO: lockedSprite.SetActive(state.locked);
     }
 
     public void SelectRecipe() {
         Debug.Log("Clicked");
-        G.UI.uiType = UIType.HUD;
+        G.UI.uiType = UIType.TimingMinigame; // temporary
         G.UI.MarkModified();
     }
 }

@@ -9,6 +9,7 @@ public enum UIType {
     MainMenu,
     Cutscene,
     RecipeSelector,
+    TimingMinigame,
 }
 
 public class UIState
@@ -73,6 +74,7 @@ public class UIMainState : UIState {
 
     public UIType uiType;
     public UIRecipeSelectorState recipeSelector;
+    public UITimingMinigameState timingMinigame;
 }
 
 public class UIMain : UIView<UIMainState> {
@@ -80,6 +82,7 @@ public class UIMain : UIView<UIMainState> {
     // e.g. public UIMainMenu menu;
     public UIRecipeSelector recipeSelector;
     public UIMainMenu mainMenu;
+    public UITimingMinigame timingMinigame;
 
     public override void ApplyNewStateInternal()
     {
@@ -87,6 +90,7 @@ public class UIMain : UIView<UIMainState> {
         // e.g. menu.gameObject.SetActive(state.uiType == UIType.Menu);
         recipeSelector.gameObject.SetActive(state.uiType == UIType.RecipeSelector);
         mainMenu.gameObject.SetActive(state.uiType == UIType.MainMenu);
+        timingMinigame.gameObject.SetActive(state.uiType == UIType.TimingMinigame);
     }
     public override void UpdateChildren() {
         // TODO: set the state of each UI type
@@ -96,22 +100,28 @@ public class UIMain : UIView<UIMainState> {
 
         recipeSelector.state = state.recipeSelector;
         recipeSelector.ApplyNewState();
+
+        timingMinigame.state = state.timingMinigame;
+        timingMinigame.ApplyNewState();
     }
     public static UIMainState DefaultState() {
         return new UIMainState {
             uiType = UIType.MainMenu,
             recipeSelector = new UIRecipeSelectorState() {
                 recipes = new List<UIRecipeState>() {
-                    new UIRecipeState() { name = "Rice", description = "staple"},
-                    new UIRecipeState() { name = "Adobo", description = "Manok"},
-                    new UIRecipeState() { name = "Pinakbet", description = "Gulay"},
-                    new UIRecipeState() { name = "Sinigang", description = "Maasim"},
-                    new UIRecipeState() { name = "Kare-Kare", description = "Peanut Butter"},
-                    new UIRecipeState() { name = "Halo-Halo", description = "Matamis"},
+                    new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Adobo", description = "Manok", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Pinakbet", description = "Gulay", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Sinigang", description = "Maasim", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Kare-Kare", description = "Peanut Butter", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Halo-Halo", description = "Matamis", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
 
                     // new UIRecipeState { name = "Adobo"}
                 } 
                 
+            },
+            timingMinigame = new UITimingMinigameState() {
+                instructions = new List<UITimingInstructionState>()
             }
             
             // { recipes = new List<UIRecipestate> { new UIRecipeState { name = "Adobo"}}}

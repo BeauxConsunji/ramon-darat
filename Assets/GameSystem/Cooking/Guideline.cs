@@ -29,6 +29,7 @@ public class Guideline : MonoBehaviour
             GameObject trigger = Instantiate(triggerPrefab, worldPosition, Quaternion.identity, transform);
             trigger.GetComponent<CircleCollider2D>().radius = triggerRadius;
             triggers.Add(trigger.transform);
+            trigger.GetComponent<GuidelineTrigger>().correctTool = this.correctTool;
         }
 
         var obj = GetComponentInParent<Ingredient>();
