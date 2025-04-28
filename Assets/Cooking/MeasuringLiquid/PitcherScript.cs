@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PitcherScript : MonoBehaviour
 {
+    public PouringAreaScript pouringArea;
+
+    // for tilting controls
     public float rotateSpeed = 30f;
     private float z;
     private bool isPressed;
+    private bool canPour;
 
     // Start is called before the first frame update
     void Start()
@@ -17,20 +22,27 @@ public class PitcherScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && z < 90)
+        Debug.Log("IS PRESSED: " + isPressed);
+        // pouring
+        if (canPour)
         {
-            z += Time.deltaTime * rotateSpeed;
-            isPressed = true;
-        }
-        else if (!Input.GetKey(KeyCode.Space) && z > 0)
-        {
-            z -= Time.deltaTime * rotateSpeed;
-            isPressed = false;
+            if (Input.GetKey(KeyCode.Space) && z < 90)
+            {
+                z += Time.deltaTime * rotateSpeed;
+                isPressed = true;
+            }
+            else if (!Input.GetKey(KeyCode.Space) && z > 0)
+            {
+                z -= Time.deltaTime * rotateSpeed;
+                isPressed = false;
+            }
+
+            transform.localRotation = Quaternion.Euler(0f, 0f, z);
         }
 
-        transform.localRotation = Quaternion.Euler(0f, 0f, z);
     }
 
+    // set pouring controls
     public float GetZ()
     {
         return z;
@@ -38,6 +50,23 @@ public class PitcherScript : MonoBehaviour
     public bool IsPouring()
     {
         return isPressed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "PouringAreaTrigger")
+        {
+            canPour = true;
+            Debug.Log("u can pour now");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "PouringAreaTrigger")
+        {
+            canPour = false;
+        }
     }
 
 }

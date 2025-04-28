@@ -6,7 +6,7 @@ public class WaterScript : MonoBehaviour
 {
     public PouringScript pouredWater;
     public PitcherScript pitcher;
-    private float maxHeight = -3.09f;
+    private float maxHeight = -2.3f;
     private float aimedHeight = 0.35f;
     private float moveSpeed = 10f;
 
