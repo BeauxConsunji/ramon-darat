@@ -57,7 +57,7 @@ public class TimingMinigame : MonoBehaviour
     public void NextInstruction() {
         if (currentInstruction + 1 >= instructions.Count) {
             done = true;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             return;
         }
         instructions[currentInstruction].gameObject.SetActive(false);

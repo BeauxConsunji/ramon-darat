@@ -20,7 +20,7 @@ public class UITimingInstruction : UIView<UITimingInstructionState>
 
     void Start()
     {
-        minigame = transform.parent.parent.GetComponent<UITimingMinigame>(); // so scuffed ;-;
+        minigame = transform.parent.parent.parent.GetComponent<UITimingMinigame>(); // so scuffed ;-;
 
         rectTransform = GetComponent<RectTransform>();
         if (minigame != null) {

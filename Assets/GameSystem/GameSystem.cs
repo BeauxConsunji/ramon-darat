@@ -26,8 +26,8 @@ public partial class GameSystem : MonoBehaviour
     public UIMain ui;
     public Camera mainCamera;
     public ControlMode controlMode;
-
     public ControlManager controls;
+    public Dictionary<string, GameObject> gameObjectRegistry = new Dictionary<string, GameObject>();
 
 
     void Awake() {
@@ -81,5 +81,20 @@ public partial class GameSystem : MonoBehaviour
         var height = Mathf.Abs(corners[2].y - corners[0].y);
 
         return new Vector2(width, height);
+    }
+
+    public void RegisterGameObject(string id, GameObject obj) {
+        Debug.Assert(!gameObjectRegistry.ContainsKey(id));
+        gameObjectRegistry.Add(id, obj);
+    }
+    public void UnregisterGameObject(string id, GameObject obj)
+    {
+        Debug.Assert(gameObjectRegistry.ContainsKey(id), id + "does not exist");
+        if (gameObjectRegistry[id] == obj) gameObjectRegistry.Remove(id);
+    }
+
+    public bool TryGetGameObjectById(string id, out GameObject obj) {
+        obj = null;
+        return !string.IsNullOrEmpty(id) && gameObjectRegistry.TryGetValue(id, out obj);
     }
 }
