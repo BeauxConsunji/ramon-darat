@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PouringArea
+  - Pitcher
+  - Bigas
+  - PitcherPourLimit
   layers:
   - Default
   - TransparentFX
@@ -11,11 +15,11 @@ TagManager:
   - PouringWater
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PouringArea
+  - Pitcher
+  - Guide
+  - RiceCup
+  - Bigas
   - 
   - 
   - 
