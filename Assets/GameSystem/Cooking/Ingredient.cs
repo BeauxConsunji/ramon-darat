@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Ingredient : MonoBehaviour
+{
+    public List<Transform> guidelines;
+    public List<Sprite> sprites;
+    public SpriteRenderer spriteRenderer;
+    public int currentGuideline = 0;
+    public bool done = false;
+
+    void Start()
+    {
+        foreach (var guideline in GetComponentsInChildren<Guideline>()) {
+            guidelines.Add(guideline.transform);
+            guideline.gameObject.SetActive(false);
+        }
+        if (guidelines.Count > 0)
+            guidelines[0].gameObject.SetActive(true);
+        
+        if (sprites.Count > 0)
+            spriteRenderer.sprite = sprites[0];
+    }
+
+    public void MarkGuidelineAsCompleted() {
+        if (done) return;
+        if (currentGuideline + 1 >= guidelines.Count) {
+            done = true;
+            Destroy(gameObject); // TODO: This should proceed to the next minigame
+            return;
+        }
+        guidelines[currentGuideline].gameObject.SetActive(false);
+        spriteRenderer.sprite = sprites[currentGuideline];
+        currentGuideline++;
+        guidelines[currentGuideline].gameObject.SetActive(true);
+        spriteRenderer.sprite = sprites[currentGuideline];
+    }
+}

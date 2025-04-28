@@ -1,0 +1,68 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "4514ebb1-8fbd-41b9-8e74-998c8c6a6188",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "c4cdbb7f-7a72-43e6-8879-56e672b1e742",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4efd6194-6df4-477b-87f7-483d33a9c3e5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Cooking",
+            "id": "df10f998-f39e-4eaa-850d-c1fb9a798289",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "c465a7b5-a0f4-4c77-a5cd-2539556a8570",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1d9b2003-ab37-4c3b-a53b-849fe023533e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "KeyboardMouse",
+            "bindingGroup": "KeyboardMouse",
+            "devices": []
+        }
+    ]
+}
