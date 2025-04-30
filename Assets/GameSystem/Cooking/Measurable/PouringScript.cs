@@ -6,7 +6,6 @@ public class PouringScript : MonoBehaviour
 {
     public Transform PitcherTip;
     public PitcherScript pitcher;
-    public WaterScript water;
     private float maxHeight = 3f;
     private float height;
     private float maxThickness = 0.05f;
@@ -15,7 +14,7 @@ public class PouringScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

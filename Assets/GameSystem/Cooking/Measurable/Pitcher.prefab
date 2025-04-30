@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27914ec2037841942af009573b0de019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pouringArea: {fileID: 0}
   rotateSpeed: 30
 --- !u!61 &3001883852732621861
 BoxCollider2D:

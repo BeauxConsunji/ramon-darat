@@ -8,6 +8,7 @@ TagManager:
   - Pitcher
   - Bigas
   - PitcherPourLimit
+  - MeasurableIngredient
   layers:
   - Default
   - TransparentFX

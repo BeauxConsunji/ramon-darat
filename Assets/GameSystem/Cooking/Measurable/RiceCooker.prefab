@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 450499094567558852}
   - component: {fileID: 689597030931775610}
   - component: {fileID: 1723691758585632514}
+  - component: {fileID: 2024801495545167786}
   m_Layer: 2
   m_Name: Guide
   m_TagString: Untagged
@@ -351,7 +352,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.46999997, z: 0}
-  m_LocalScale: {x: 2.7000003, y: 0.08, z: 1}
+  m_LocalScale: {x: 3.5, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3877562699752479297}
@@ -453,6 +454,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2024801495545167786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894762943928596833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886963bcbefc6aa4d9c19edc2d5388f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minigame: {fileID: 0}
+  timeEnter: -1
+  duration: 2
 --- !u!1 &6318578221779867001
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +494,7 @@ Transform:
   m_GameObject: {fileID: 6318578221779867001}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45000002, y: -1.9399998, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -506,7 +522,7 @@ GameObject:
   - component: {fileID: 8411717561661739532}
   m_Layer: 2
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: MeasurableIngredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
