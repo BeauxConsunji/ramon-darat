@@ -36,9 +36,8 @@ public class TimingMinigame : Minigame
     }
 
     void OnEnable() {
-        startTime = Time.time;
-        G.UI.timingMinigame.startTime = startTime;
         InitializeUI();
+        G.UI.timingMinigame.startTime = Time.time;
     }
 
     // Update is called once per frame

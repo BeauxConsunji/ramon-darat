@@ -20,17 +20,16 @@ public class UITimingMinigame : UIView<UITimingMinigameState>
     public GameObject instructionPrefab;
     public RectTransform currentTimeLine;
     public RectTransform timeline;
-    public RectTransform rectTransform;
 
-    public float offset = 50.0f; // offset from the left which indicates the current time
+    public float offset = 100.0f; // offset from the left which indicates the current time
     public float widthInSeconds = 8.0f; // the width of the timeline is equivalent to how many seconds
-    public float pixelsPerSecond { get { return G.I.GetAbsoluteSize(rectTransform).x / widthInSeconds; }}
+    public float pixelsPerSecond;
 
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
         Debug.Log(pixelsPerSecond);
-        currentTimeLine.anchoredPosition += new Vector2(offset, 0.0f);
+        currentTimeLine.anchoredPosition = new Vector2(offset, 0.0f);
+        pixelsPerSecond = timeline.rect.width / widthInSeconds;
     }
     
     
