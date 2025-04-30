@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class UIRecipeState : UIState {
     // info abt 
     public bool locked = true;
+    public bool done = false;
     public string name;
     public string description;
     public Sprite thumbnail;
