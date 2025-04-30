@@ -33,9 +33,9 @@ public class UITimingMinigame : UIView<UITimingMinigameState>
         currentTimeLine.anchoredPosition += new Vector2(offset, 0.0f);
     }
     
-
+    
     public override void ApplyNewStateInternal() {
-        score.text = "Score: " + state.score;
+        score.text = "Score: " + G.UI.timingMinigame.score;
         ApplyNewStateArray<UITimingInstructionState, UITimingInstruction>(timeline, instructionPrefab, state.instructions);
     }
 
