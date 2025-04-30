@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891cf6929da53434f993bff5e92c515e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   loadingScreenText: Pour the water to the right level and put 2 cups of rice
   loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
   gameObjectId: {fileID: 5353409390988556600}

@@ -35,11 +35,12 @@ public class Recipe : MonoBehaviour
         if (G.UI.recipe.done) return;
         if (G.UI.recipe.currentMinigame + 1 >= G.UI.recipe.minigames.Count) {
             G.UI.recipe.done = true;
-            gameObject.SetActive(false);
             G.UI.uiType = UIType.Scoreboard;
             G.UI.scoreboard.score = score;
+            G.UI.scoreboard.MarkModified();
             G.UI.MarkModified();
             G.UI.recipe = null;
+            gameObject.SetActive(false);
             return;
         }
         minigames[G.UI.recipe.currentMinigame].gameObject.SetActive(false);

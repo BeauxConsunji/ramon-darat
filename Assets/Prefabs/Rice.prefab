@@ -49,7 +49,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &4708641133856454737
@@ -211,7 +211,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &701495877980750254
@@ -369,7 +369,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &6420286198284035474
@@ -531,7 +531,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &1623986583915950288
@@ -690,7 +690,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &6877142053475449552
@@ -849,7 +849,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &2995646138694522628
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &6113488964372085154
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &7468462420344215731
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
-  triggerRadius: 0.07
+  triggerRadius: 0.7
   timeLimit: 2
   currentTargetTrigger: 0
 --- !u!120 &6489719032367975728

@@ -7,7 +7,7 @@ public enum HeatLevel {None, Low, Medium, High};
 [RequireComponent(typeof(BoxCollider2D))]
 public class Draggable : MonoBehaviour
 {
-    public enum Type { None, Knife, Stirrer, Skin, Ingredient, Knob, RiceCup }
+    public enum Type { None, Knife, Stirrer, Skin, Ingredient, Knob, RiceCup, PotCover }
     public Type type = Type.None;
     public float knobRange = 2.0f;
     private Plane dragPlane;
@@ -20,6 +20,7 @@ public class Draggable : MonoBehaviour
     private TimingMinigame timingMinigame;
 
     void Start() {
+        Debug.Log("Draggable start");
         settingsCount = HeatLevel.GetNames(typeof(HeatLevel)).Length;
         timingMinigame = GetComponentInParent<TimingMinigame>();
         
@@ -28,13 +29,13 @@ public class Draggable : MonoBehaviour
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = defaultSprite;
-        boxCollider.size = defaultSprite.bounds.size;
+        SetColliderFromSprite();
     }
 
     void OnMouseDown() {
         if (type != Type.RiceCup) {
             spriteRenderer.sprite = draggedSprite;
-            boxCollider.size = draggedSprite.bounds.size;
+            SetColliderFromSprite();
         }
 
         dragPlane = new Plane(G.I.mainCamera.transform.forward, transform.position);
@@ -60,7 +61,7 @@ public class Draggable : MonoBehaviour
     void OnMouseUp() {
         if (type != Type.RiceCup) {
             spriteRenderer.sprite = defaultSprite;
-            boxCollider.size = defaultSprite.bounds.size;
+            SetColliderFromSprite();
         }
 
         if (type == Type.Knob) {
@@ -68,5 +69,10 @@ public class Draggable : MonoBehaviour
             if (timingMinigame != null)
                 timingMinigame.ChangeHeatLevel((HeatLevel)(settingIndex));
         }
+    }
+
+    private void SetColliderFromSprite() {
+        Debug.Log("Set Collider From Sprite");
+        boxCollider.size = new Vector2(spriteRenderer.sprite.bounds.size.x * spriteRenderer.transform.lossyScale.x, spriteRenderer.sprite.bounds.size.y * spriteRenderer.transform.lossyScale.y);
     }
 }

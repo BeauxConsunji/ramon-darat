@@ -10,10 +10,11 @@ public class Ingredient : MonoBehaviour
     public int currentGuideline = 0;
     public bool done = false;
     public Minigame minigame; // drag the component in unity inspector
+    public Transform guidelineContainer;
 
     void Start()
     {
-        foreach (var guideline in GetComponentsInChildren<Guideline>()) {
+        foreach (var guideline in guidelineContainer.GetComponentsInChildren<Guideline>()) {
             guidelines.Add(guideline.transform);
             guideline.gameObject.SetActive(false);
         }

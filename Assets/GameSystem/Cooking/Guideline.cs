@@ -26,7 +26,7 @@ public class Guideline : MonoBehaviour
 
         for (int i = 0; i < lineRenderer.positionCount; i++) {
             Vector3 worldPosition = lineRenderer.GetPosition(i);
-            GameObject trigger = Instantiate(triggerPrefab, worldPosition, Quaternion.identity, transform);
+            GameObject trigger = Instantiate(triggerPrefab, transform.TransformPoint(worldPosition), Quaternion.identity, transform);
             trigger.GetComponent<CircleCollider2D>().radius = triggerRadius;
             triggers.Add(trigger.transform);
             trigger.GetComponent<GuidelineTrigger>().correctTool = this.correctTool;

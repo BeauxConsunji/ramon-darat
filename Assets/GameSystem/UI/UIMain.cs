@@ -138,7 +138,7 @@ public class UIMain : UIView<UIMainState> {
                     new UIRecipeState() { name = "Sample", description = "Sample", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="SampleRecipe"},
                     
                     new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="RiceRecipe"},
-                    new UIRecipeState() { name = "Adobo", description = "Manok", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    new UIRecipeState() { name = "Adobo", description = "Manok", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="AdoboRecipe"},
                     new UIRecipeState() { name = "Pinakbet", description = "Gulay", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Sinigang", description = "Maasim", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Kare-Kare", description = "Peanut Butter", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},

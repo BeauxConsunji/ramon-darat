@@ -68,12 +68,13 @@ public class TimingMinigame : Minigame
 
     public override void MarkCompleted() {
         if (done) return;
-        NextInstruction();
+        
         // G.UI.timingMinigame.instructions[currentInstruction].done = true;
         // G.UI.timingMinigame.instructions[currentInstruction].MarkModified();
         
         G.UI.timingMinigame.score++;
         G.UI.timingMinigame.MarkModified();
+        NextInstruction();
     }
 
     public void ChangeHeatLevel(HeatLevel heatLevel) {
