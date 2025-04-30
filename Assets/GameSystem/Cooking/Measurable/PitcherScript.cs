@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PitcherScript : MonoBehaviour
 {
-    public PouringAreaScript pouringArea;
-
     // for tilting controls
     public float rotateSpeed = 30f;
     private float z;

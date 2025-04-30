@@ -211,5 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f7d72b51c404548a41fb48572d5292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 6
   knobRange: 2
+  defaultSprite: {fileID: 21300000, guid: 8d0027d8d71780e4baa9a03b7b18863d, type: 3}
+  draggedSprite: {fileID: 21300000, guid: 8d0027d8d71780e4baa9a03b7b18863d, type: 3}
+  boxCollider: {fileID: 2475208413539599095}
+  spriteRenderer: {fileID: 8025751979812691225}

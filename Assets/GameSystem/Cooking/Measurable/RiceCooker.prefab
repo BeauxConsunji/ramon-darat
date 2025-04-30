@@ -494,7 +494,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.45000002, y: -1.9399998, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6754993753548151267}
@@ -516,7 +516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5240030519757266381}
   - component: {fileID: 44127567244600899}
-  - component: {fileID: 7514043033602731683}
+  - component: {fileID: 2333418818547924588}
   - component: {fileID: 1312675575480482752}
   - component: {fileID: 8411717561661739532}
   m_Layer: 2
@@ -593,7 +593,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 1
---- !u!114 &7514043033602731683
+--- !u!114 &2333418818547924588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7235404054488094590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09f05dc8e3789ac41ad59a81377c0827, type: 3}
+  m_Script: {fileID: 11500000, guid: b2f58a30ef6bfe84cbe34de97cd5c63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pouredWater: {fileID: 0}

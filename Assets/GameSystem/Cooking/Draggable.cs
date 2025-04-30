@@ -7,21 +7,36 @@ public enum HeatLevel {None, Low, Medium, High};
 [RequireComponent(typeof(BoxCollider2D))]
 public class Draggable : MonoBehaviour
 {
-    public enum Type { None, Knife, Stirrer, Skin, Ingredient, Knob }
+    public enum Type { None, Knife, Stirrer, Skin, Ingredient, Knob, RiceCup }
     public Type type = Type.None;
     public float knobRange = 2.0f;
     private Plane dragPlane;
     private Vector3 originalPosition;
     private Vector3 offset;
+    public Sprite defaultSprite, draggedSprite;
+    public BoxCollider2D boxCollider;
+    public SpriteRenderer spriteRenderer;
     private int settingsCount;
     private TimingMinigame timingMinigame;
 
     void Start() {
         settingsCount = HeatLevel.GetNames(typeof(HeatLevel)).Length;
         timingMinigame = GetComponentInParent<TimingMinigame>();
+        
+        if (boxCollider == null)
+            boxCollider = GetComponent<BoxCollider2D>();
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = defaultSprite;
+        boxCollider.size = defaultSprite.bounds.size;
     }
 
     void OnMouseDown() {
+        if (type != Type.RiceCup) {
+            spriteRenderer.sprite = draggedSprite;
+            boxCollider.size = draggedSprite.bounds.size;
+        }
+
         dragPlane = new Plane(G.I.mainCamera.transform.forward, transform.position);
         Ray camRay = G.I.mainCamera.ScreenPointToRay(Input.mousePosition);
         float planeDist;
@@ -43,6 +58,11 @@ public class Draggable : MonoBehaviour
         }
     }
     void OnMouseUp() {
+        if (type != Type.RiceCup) {
+            spriteRenderer.sprite = defaultSprite;
+            boxCollider.size = defaultSprite.bounds.size;
+        }
+
         if (type == Type.Knob) {
             var settingIndex = settingsCount - 1 - Mathf.Floor((transform.rotation.z + 1) * (settingsCount-2) / 2.0f);
             if (timingMinigame != null)
