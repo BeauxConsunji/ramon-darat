@@ -101,7 +101,15 @@ public class UIMain : UIView<UIMainState> {
         // Example:
         // menu.state = state.menu;
         // menu.ApplyNewState();
-
+        if (state.recipe != null) {
+            foreach (var recipe in recipeSelector.state.recipes) {
+                if (recipe.name == state.recipe.name && recipe.done != state.recipe.done) { // get the current recipe and set done
+                    recipe.done = state.recipe.done;
+                    recipe.MarkModified();
+                }
+            }
+        }
+        
         recipeSelector.state = state.recipeSelector;
         recipeSelector.ApplyNewState();
 
@@ -110,13 +118,18 @@ public class UIMain : UIView<UIMainState> {
 
         loadingScreen.state = state.recipe;
         loadingScreen.ApplyNewState();
+
+        
     }
     public static UIMainState DefaultState() {
         return new UIMainState {
             uiType = UIType.MainMenu,
             recipeSelector = new UIRecipeSelectorState() {
                 recipes = new List<UIRecipeState>() {
-                    new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="RiceRecipe"}, // loadingScreenInstruction="Follow the instructions at the right time.", loadingScreenImage = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                    // TODO: Remove later
+                    new UIRecipeState() { name = "Sample", description = "Sample", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="SampleRecipe"},
+                    
+                    new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="RiceRecipe"},
                     new UIRecipeState() { name = "Adobo", description = "Manok", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Pinakbet", description = "Gulay", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Sinigang", description = "Maasim", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},

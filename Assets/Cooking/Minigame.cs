@@ -8,9 +8,10 @@ public class Minigame : MonoBehaviour
     public enum Type { Guideline, Measurable, Timing };
     public Type type;
     public string loadingScreenText;
-    public Sprite loadingScreenImage;
+    public Sprite loadingScreenImage; 
     public GameObjectID gameObjectId;
     public bool done = false;
+    public Recipe recipe;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Minigame : MonoBehaviour
 
     public virtual void MarkCompleted() {
         if (done) return;
-        // TODO: Go to next minigame
+        if (recipe != null)
+            recipe.NextMinigame();
     }
 }
