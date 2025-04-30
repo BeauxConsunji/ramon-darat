@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -8,6 +9,7 @@ public class TimingMinigame : Minigame
     public float startTime = 0.0f;
     public List<TimingInstruction> instructions = new List<TimingInstruction>();
     public int currentInstruction = 0;
+    public bool instructionIsActive = false;
     public Draggable stoveKnob;
     public HeatLevel heatLevel;
 
@@ -44,13 +46,16 @@ public class TimingMinigame : Minigame
     void Update()
     {
         var instruction = instructions[currentInstruction];
-        if (startTime + instruction.startTime <= Time.time) {
-            if (startTime + instruction.startTime + instruction.duration <= Time.time) {
-                NextInstruction();
-            } else {
-                instruction.gameObject.SetActive(true);
-            }
-        }   
+        float instructionStart = startTime + instruction.startTime;
+        float instructionEnd = instructionStart + instruction.duration;
+        instruction.gameObject.SetActive(true);
+        
+        if (Time.time >= instructionStart && Time.time <= instructionEnd && !instructionIsActive) {
+            instructionIsActive = true;
+        }   else if (Time.time > instructionEnd) {
+            instructionIsActive = false;
+            NextInstruction();
+        }
     }
 
     public void NextInstruction() {
@@ -68,24 +73,22 @@ public class TimingMinigame : Minigame
     public override void MarkCompleted() {
         if (done) return;
         
-        // G.UI.timingMinigame.instructions[currentInstruction].done = true;
-        // G.UI.timingMinigame.instructions[currentInstruction].MarkModified();
+        if (instructionIsActive) {
+            G.UI.timingMinigame.score++;
+            G.UI.timingMinigame.MarkModified();
+            NextInstruction();
+        }
         
-        G.UI.timingMinigame.score++;
-        G.UI.timingMinigame.MarkModified();
-        NextInstruction();
     }
 
     public void ChangeHeatLevel(HeatLevel heatLevel) {
         if (this.heatLevel == heatLevel)
             return;
         
+        var instruction = instructions[currentInstruction];
         this.heatLevel = heatLevel;
-        if (instructions[currentInstruction].type == TimingInstruction.Type.Heat && instructions[currentInstruction].targetHeatLevel == heatLevel) {
+        if (instruction.type == TimingInstruction.Type.Heat && instruction.targetHeatLevel == heatLevel) {
             base.MarkCompleted();
-        } else {
-            G.UI.timingMinigame.score--;
-            G.UI.timingMinigame.MarkModified();
         }
     }
 }

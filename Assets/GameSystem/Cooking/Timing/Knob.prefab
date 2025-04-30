@@ -85,6 +85,18 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8572907203829742033, guid: 6927b5b87381bd74aae02e42a1e3ee81, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8572907203829742033, guid: 6927b5b87381bd74aae02e42a1e3ee81, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8572907203829742033, guid: 6927b5b87381bd74aae02e42a1e3ee81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8572907203829742033, guid: 6927b5b87381bd74aae02e42a1e3ee81, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}

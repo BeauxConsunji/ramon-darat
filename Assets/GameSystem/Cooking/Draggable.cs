@@ -52,7 +52,12 @@ public class Draggable : MonoBehaviour
         var dragPoint = camRay.GetPoint(planeDist);
 
         if (type == Type.Knob) {
-            transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Clamp((dragPoint + offset - originalPosition).x, -2, 2) * -180.0f / knobRange);
+            var dragAmount = (dragPoint + offset - originalPosition).x;
+            var dragNormalized = Mathf.Clamp(dragAmount / (knobRange/2), -1, 1);
+            var angle = 360 * (1f - (dragNormalized + 1f) / 2f);
+
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
+            Debug.Log(transform.rotation.eulerAngles.z);
             
         } else {
             transform.position = dragPoint + offset;
@@ -65,7 +70,21 @@ public class Draggable : MonoBehaviour
         }
 
         if (type == Type.Knob) {
-            var settingIndex = settingsCount - 1 - Mathf.Floor((transform.rotation.z + 1) * (settingsCount-2) / 2.0f);
+            float angle = transform.rotation.eulerAngles.z;
+            if (angle == 0.0f)
+                angle = 360.0f;
+            
+            int settingIndex;
+            if (angle > 240f) {
+                settingIndex = 3;
+            } 
+            else if (angle > 120f) {
+                settingIndex = 2;
+            } 
+            else {
+                settingIndex = 1;
+            }
+            Debug.Log("Set Heat Level to " + ((HeatLevel)(settingIndex)).ToString());
             if (timingMinigame != null)
                 timingMinigame.ChangeHeatLevel((HeatLevel)(settingIndex));
         }

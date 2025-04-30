@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3339157707413299941, guid: c114ddbffd7dc6447b7d7053fc50d7f8, type: 3}
       propertyPath: triggerRadius
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3879937216404709253, guid: c114ddbffd7dc6447b7d7053fc50d7f8, type: 3}
       propertyPath: m_Positions.Array.size
