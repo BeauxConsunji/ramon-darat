@@ -11,6 +11,7 @@ public enum UIType {
     RecipeSelector,
     TimingMinigame,
     LoadingScreen,
+    Scoreboard,
 }
 
 public class UIState
@@ -77,6 +78,8 @@ public class UIMainState : UIState {
     public UIRecipeSelectorState recipeSelector;
     public UITimingMinigameState timingMinigame;
     public UIRecipeState recipe;
+    public UIScoreboardState scoreboard;
+
 }
 
 public class UIMain : UIView<UIMainState> {
@@ -86,6 +89,8 @@ public class UIMain : UIView<UIMainState> {
     public UIMainMenu mainMenu;
     public UITimingMinigame timingMinigame;
     public UILoadingScreen loadingScreen;
+    public UIScoreboard scoreboard;
+
 
     public override void ApplyNewStateInternal()
     {
@@ -95,6 +100,8 @@ public class UIMain : UIView<UIMainState> {
         mainMenu.gameObject.SetActive(state.uiType == UIType.MainMenu);
         timingMinigame.gameObject.SetActive(state.uiType == UIType.TimingMinigame);
         loadingScreen.gameObject.SetActive(state.uiType == UIType.LoadingScreen);
+        scoreboard.gameObject.SetActive(state.uiType == UIType.Scoreboard);
+
     }
     public override void UpdateChildren() {
         // TODO: set the state of each UI type
@@ -110,6 +117,9 @@ public class UIMain : UIView<UIMainState> {
 
         loadingScreen.state = state.recipe;
         loadingScreen.ApplyNewState();
+
+        scoreboard.state = state.scoreboard;
+        scoreboard.ApplyNewState();
     }
     public static UIMainState DefaultState() {
         return new UIMainState {
@@ -129,8 +139,8 @@ public class UIMain : UIView<UIMainState> {
             },
             timingMinigame = new UITimingMinigameState() {
                 instructions = new List<UITimingInstructionState>()
-            }
-            
+            },
+            scoreboard = new UIScoreboardState() { score = 0 },
             // { recipes = new List<UIRecipestate> { new UIRecipeState { name = "Adobo"}}}
             // TODO: initialize each UI type
             // Example:
