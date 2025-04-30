@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class TimingMinigame : Minigame
 {
@@ -56,6 +57,8 @@ public class TimingMinigame : Minigame
     public void NextInstruction() {
         if (currentInstruction + 1 >= instructions.Count) {
             done = true;
+            recipe.score = G.UI.timingMinigame.score;
+            recipe.NextMinigame();
             gameObject.SetActive(false);
             return;
         }

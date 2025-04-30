@@ -5,6 +5,7 @@ using UnityEngine;
 public class Recipe : MonoBehaviour
 {
     public List<Minigame> minigames = new List<Minigame>();
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +36,8 @@ public class Recipe : MonoBehaviour
         if (G.UI.recipe.currentMinigame + 1 >= G.UI.recipe.minigames.Count) {
             G.UI.recipe.done = true;
             gameObject.SetActive(false);
-            // TODO: Go back to recipe selection menu
-            G.UI.uiType = UIType.RecipeSelector;
+            G.UI.uiType = UIType.Scoreboard;
+            G.UI.scoreboard.score = score;
             G.UI.MarkModified();
             G.UI.recipe = null;
             return;

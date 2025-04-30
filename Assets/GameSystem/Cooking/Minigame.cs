@@ -21,7 +21,9 @@ public class Minigame : MonoBehaviour
 
     public virtual void MarkCompleted() {
         if (done) return;
-        if (recipe != null)
+        if (recipe != null) {
+            done = true;
             recipe.NextMinigame();
+        }
     }
 }

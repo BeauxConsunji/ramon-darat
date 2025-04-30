@@ -169,15 +169,19 @@ MonoBehaviour:
       loadingScreenImage: {fileID: 0}
       gameObjectId: 
       instructions: []
+      score: 0
       startTime: 0
     recipe:
       locked: 1
+      done: 0
       name: 
       description: 
       thumbnail: {fileID: 0}
       gameObjectId: 
       minigames: []
       currentMinigame: 0
+    scoreboard:
+      score: 0
   recipeSelector: {fileID: 1061484584751036060}
   mainMenu: {fileID: 9179881343391879580}
   timingMinigame: {fileID: 1859548708714524535}
