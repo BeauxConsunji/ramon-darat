@@ -28,13 +28,13 @@ public class UITimingMinigame : UIView<UITimingMinigameState>
     void Start()
     {
         Debug.Log(pixelsPerSecond);
-        currentTimeLine.anchoredPosition = new Vector2(offset, 0.0f);
+        // currentTimeLine.anchoredPosition = new Vector2(offset, 0.0f);
         pixelsPerSecond = timeline.rect.width / widthInSeconds;
     }
     
     
     public override void ApplyNewStateInternal() {
-        score.text = "Score: " + G.UI.timingMinigame.score;
+        // score.text = "Score: " + G.UI.timingMinigame.score;
         ApplyNewStateArray<UITimingInstructionState, UITimingInstruction>(timeline, instructionPrefab, state.instructions);
     }
 

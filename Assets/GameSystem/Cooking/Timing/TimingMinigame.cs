@@ -29,7 +29,7 @@ public class TimingMinigame : Minigame
                 startTime = instruction.startTime,
                 duration = instruction.duration,
                 instruction = instruction.instruction,
-
+                type = instruction.type
             });
         }
         G.UI.MarkModified();
