@@ -166,6 +166,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e007c382552ba1e47b648d9a406644b0, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 56cbc95dbee6a74448eaa513b785ebc4, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: af0462341bd622149bc1944b478679a3, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: fec0f733d515f5b45b75717e44158643, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: f87a614e9eac92342b5f5d40b2f3170c, type: 3}
     - target: {fileID: 3373007168207609707, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: m_Positions.Array.data[0].x
       value: -1
@@ -184,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4285251050021128562, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: m_Name
-      value: Chicken
+      value: Pork
       objectReference: {fileID: 0}
     - target: {fileID: 5783679830364257637, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: m_LocalPosition.x

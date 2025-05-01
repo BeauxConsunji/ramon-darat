@@ -1258,32 +1258,56 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: sprites.Array.size
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 133a39e1dbff7174190b8942d9fa927f, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e93f176f41125c43a850e03cd57b9b0, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: a93da89293285aa4a9b3864f4258ecf0, type: 3}
     - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: sprites.Array.data[3]
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 17f7fdc1740ae4943aa9311ac81629f9, type: 3}
+      objectReference: {fileID: 21300000, guid: 5475744459293354fbbe58c89dbaf232, type: 3}
     - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: sprites.Array.data[4]
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: cc6871613755bcc48a245475422e8aa0, type: 3}
+      objectReference: {fileID: 21300000, guid: 133a39e1dbff7174190b8942d9fa927f, type: 3}
     - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: sprites.Array.data[5]
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 0965941bfd34a9640a9fbbb5092aad02, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e93f176f41125c43a850e03cd57b9b0, type: 3}
     - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: sprites.Array.data[6]
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 17f7fdc1740ae4943aa9311ac81629f9, type: 3}
+      objectReference: {fileID: 21300000, guid: a93da89293285aa4a9b3864f4258ecf0, type: 3}
     - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: sprites.Array.data[7]
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: cc6871613755bcc48a245475422e8aa0, type: 3}
+      objectReference: {fileID: 21300000, guid: 5475744459293354fbbe58c89dbaf232, type: 3}
     - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: sprites.Array.data[8]
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 0965941bfd34a9640a9fbbb5092aad02, type: 3}
+      objectReference: {fileID: 21300000, guid: 133a39e1dbff7174190b8942d9fa927f, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e93f176f41125c43a850e03cd57b9b0, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: a93da89293285aa4a9b3864f4258ecf0, type: 3}
+    - target: {fileID: 132090959277349134, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
+      propertyPath: sprites.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5475744459293354fbbe58c89dbaf232, type: 3}
     - target: {fileID: 4285251050021128562, guid: ddbc5bc7b9ebd404d82326e78956ed95, type: 3}
       propertyPath: m_Name
       value: Garlic
