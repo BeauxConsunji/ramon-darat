@@ -30,7 +30,7 @@ public class Ingredient : MonoBehaviour
         if (currentGuideline + 1 >= guidelines.Count) {
             done = true;
             if (minigame != null)
-                minigame.MarkCompleted();
+                minigame.IngredientDone(gameObject);
             return;
         }
         guidelines[currentGuideline].gameObject.SetActive(false);
