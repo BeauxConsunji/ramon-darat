@@ -47,10 +47,15 @@ public class Minigame : MonoBehaviour
         if (done) return;
         if (recipe != null) {
             if (ingredientList.Count == 0) {
-                done = true;
-                recipe.NextMinigame();
+                StartCoroutine(FinishMinigame());
             }
-
         }
+    }
+
+    IEnumerator FinishMinigame()
+    {
+        yield return new WaitForSeconds(2);
+        done = true;
+        recipe.NextMinigame();
     }
 }
