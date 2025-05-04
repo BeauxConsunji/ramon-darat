@@ -28,7 +28,7 @@ public class Minigame : MonoBehaviour
     }
 
     public virtual void IngredientDone(GameObject i) {
-        i.SetActive(false);
+        // i.SetActive(false);
         if (ingredientList.Contains(i)) {
             ingredientList.Remove(i);
             MarkCompleted();
