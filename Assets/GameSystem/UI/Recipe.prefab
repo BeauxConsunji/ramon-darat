@@ -190,9 +190,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state:
     locked: 1
+    done: 0
     name: 
     description: 
     thumbnail: {fileID: 0}
+    gameObjectId: 
+    minigames: []
+    currentMinigame: 0
   name: {fileID: 915947817842380231}
   description: {fileID: 5832413677386220797}
   img: {fileID: 4916230126437985591}
@@ -217,11 +221,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.9490197, g: 0.82745105, b: 0.6745098, a: 0}
+    m_HighlightedColor: {r: 0.7058824, g: 0.49411768, b: 0.3137255, a: 0.5882353}
+    m_PressedColor: {r: 0.7058824, g: 0.49411768, b: 0.3137255, a: 1}
+    m_SelectedColor: {r: 0.7058824, g: 0.49411768, b: 0.3137255, a: 1}
+    m_DisabledColor: {r: 0.3433962, g: 0.3433962, b: 0.3433962, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
