@@ -3030,7 +3030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   loadingScreenText: Drag the knife to follow the guidelines as they appear
-  loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
+  loadingScreenImage: {fileID: 21300000, guid: 72b8dc509a699cd4198a7ab8f1dfec28, type: 3}
   gameObjectId: {fileID: 4003527627636419597}
   done: 0
   recipe: {fileID: 0}
@@ -3917,7 +3917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   loadingScreenText: Drag the knife to follow the guidelines as they appear
-  loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
+  loadingScreenImage: {fileID: 21300000, guid: 72b8dc509a699cd4198a7ab8f1dfec28, type: 3}
   gameObjectId: {fileID: 6074213278234337259}
   done: 0
   recipe: {fileID: 0}
@@ -4128,7 +4128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   loadingScreenText: Drag the knife to follow the guidelines as they appear
-  loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
+  loadingScreenImage: {fileID: 21300000, guid: 72b8dc509a699cd4198a7ab8f1dfec28, type: 3}
   gameObjectId: {fileID: 4458468914495315703}
   done: 0
   recipe: {fileID: 0}
