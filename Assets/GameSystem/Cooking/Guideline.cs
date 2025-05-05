@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Guideline : MonoBehaviour
@@ -18,6 +19,8 @@ public class Guideline : MonoBehaviour
     private float lastCompletedTrigger = 0.0f;
     public int currentTargetTrigger = 0; // current target trigger so that the player does it in order
 
+    public AudioClip soundFx;
+
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
@@ -35,6 +38,7 @@ public class Guideline : MonoBehaviour
         var obj = GetComponentInParent<Ingredient>();
         if (obj != null)
             ingredient = obj;
+
     }
 
     void Update()
@@ -52,7 +56,13 @@ public class Guideline : MonoBehaviour
         if (done) return;
         if (triggers[currentTargetTrigger] == trigger) {
             if (currentTargetTrigger + 1 >= triggers.Count) {
+                // play sound here
+                if(soundFx != null) 
+                    ingredient.audioSource.clip = soundFx;
+                
                 done = true;
+                
+
                 ingredient.MarkGuidelineAsCompleted();
                 return;
             }

@@ -148,7 +148,8 @@ public class UIMain : UIView<UIMainState> {
                                             description = "The Philippines’ unofficial national dish. Rich, savory, and deeply comforting — a Filipino classic that tastes like home.",
                                             thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-adobo"),
                                             finalImage = Resources.Load<Sprite>("Sprite/Food/adobo_final"),
-                                            gameObjectId="AdoboRecipe"
+                                            gameObjectId="AdoboRecipe",
+                                            locked=false
                                         },
                     new UIRecipeState() { name = "Pinakbet",
                                             description = "A traditional Filipino vegetable stew— healthy, hearty, and bursting with flavor.",
