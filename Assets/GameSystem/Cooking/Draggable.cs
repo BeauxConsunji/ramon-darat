@@ -17,7 +17,7 @@ public class Draggable : MonoBehaviour
     public BoxCollider2D boxCollider;
     public SpriteRenderer spriteRenderer;
     private int settingsCount;
-    private TimingMinigame timingMinigame;
+    public TimingMinigame timingMinigame;
     public bool isDragged = false;
 
     void Start() {
