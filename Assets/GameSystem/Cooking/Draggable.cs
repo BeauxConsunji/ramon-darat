@@ -19,6 +19,7 @@ public class Draggable : MonoBehaviour
     private int settingsCount;
     public TimingMinigame timingMinigame;
     public bool isDragged = false;
+    public bool setColliderFromSprite = true;
 
     void Start() {
         Debug.Log("Draggable start");
@@ -77,13 +78,13 @@ public class Draggable : MonoBehaviour
             
             int settingIndex;
             if (angle > 240f) {
-                settingIndex = 3;
+                settingIndex = 1;
             } 
             else if (angle > 120f) {
                 settingIndex = 2;
             } 
             else {
-                settingIndex = 1;
+                settingIndex = 3;
             }
             
             if (timingMinigame != null)
@@ -92,6 +93,7 @@ public class Draggable : MonoBehaviour
     }
 
     private void SetColliderFromSprite() {
+        if (!setColliderFromSprite) return;
         Debug.Log("Set Collider From Sprite");
         boxCollider.size = new Vector2(spriteRenderer.sprite.bounds.size.x * spriteRenderer.transform.lossyScale.x, spriteRenderer.sprite.bounds.size.y * spriteRenderer.transform.lossyScale.y);
     }
