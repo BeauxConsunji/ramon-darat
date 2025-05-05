@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 195.49683, y: 196}
-  m_SizeDelta: {x: 1219.2036, y: 200}
+  m_AnchoredPosition: {x: 159, y: 196}
+  m_SizeDelta: {x: 1094.9, y: 200}
   m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!222 &7625329924408752821
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ramon thinks your cooking is...
+  m_text: Ramon rates your cooking
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76fa7e0ef999e3746b7c34fe7ef40591, type: 2}
   m_sharedMaterial: {fileID: 2450969555842371579, guid: 76fa7e0ef999e3746b7c34fe7ef40591, type: 2}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -168,8 +168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 882.54987, y: 196}
-  m_SizeDelta: {x: 154.9, y: 200}
+  m_AnchoredPosition: {x: 754.65894, y: 196}
+  m_SizeDelta: {x: 373.8958, y: 200}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!222 &7585194690784334281
 CanvasRenderer:
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 00/00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76fa7e0ef999e3746b7c34fe7ef40591, type: 2}
   m_sharedMaterial: {fileID: 2450969555842371579, guid: 76fa7e0ef999e3746b7c34fe7ef40591, type: 2}
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 6.460205, y: -112.343285}
+  m_AnchoredPosition: {x: 0, y: -112.35}
   m_SizeDelta: {x: -851.8893, y: 504.8137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7152977885641756855
@@ -326,14 +326,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.59494615, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e3195c56abdc5ec4298272ee71ab58b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: done
+  m_text: DINE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76fa7e0ef999e3746b7c34fe7ef40591, type: 2}
   m_sharedMaterial: {fileID: 2450969555842371579, guid: 76fa7e0ef999e3746b7c34fe7ef40591, type: 2}
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -513,8 +513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -430}
-  m_SizeDelta: {x: 466.547, y: 73.8682}
+  m_AnchoredPosition: {x: -0.0000052452, y: -420}
+  m_SizeDelta: {x: 466.547, y: 96.3116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6041440081538275020
 CanvasRenderer:
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 2633436195730319161}
   - component: {fileID: 8357164590156099675}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Ramon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -816,4 +816,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state:
     score: 0
+    total: 0
   scoreText: {fileID: 8973708516405931175}
+  final_food: {fileID: 5109149919377343805}

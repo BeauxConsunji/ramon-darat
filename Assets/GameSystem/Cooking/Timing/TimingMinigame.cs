@@ -31,8 +31,9 @@ public class TimingMinigame : Minigame
                 startTime = instruction.startTime,
                 duration = instruction.duration,
                 instruction = instruction.instruction,
-                type = instruction.type
-            });
+                type = instruction.type,
+                points = instruction.points
+            }); 
         }
         G.UI.MarkModified();
     }
@@ -64,6 +65,7 @@ public class TimingMinigame : Minigame
             if (!instructionIsActive) {
                 done = true;
                 recipe.score = G.UI.timingMinigame.score;
+                recipe.total = G.UI.timingMinigame.total;
                 recipe.NextMinigame();
                 gameObject.SetActive(false);
             }

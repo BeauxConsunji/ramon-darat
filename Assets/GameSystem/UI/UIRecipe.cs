@@ -11,7 +11,7 @@ public class UIRecipeState : UIState {
     public bool done = false;
     public string name;
     public string description;
-    public Sprite thumbnail;
+    public Sprite thumbnail, finalImage;
     public string gameObjectId;
     public List<UIMinigameState> minigames = new List<UIMinigameState>();
     public int currentMinigame = 0;
