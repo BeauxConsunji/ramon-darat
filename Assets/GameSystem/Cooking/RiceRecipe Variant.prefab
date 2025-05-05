@@ -588,6 +588,7 @@ MonoBehaviour:
   done: 0
   recipe: {fileID: 0}
   ingredientList: []
+  delayAfterDone: 2
 --- !u!1 &1007941748680401854
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +902,7 @@ GameObject:
   - component: {fileID: 358853806790913882}
   - component: {fileID: 2343609749496458076}
   m_Layer: 0
-  m_Name: Cover Pot
+  m_Name: 'Instruction: Cover Pot'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2542,8 +2543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3230565664695959437}
-  - {fileID: 4093745794293013365}
+  - {fileID: 2460428938584575803}
   - {fileID: 358853806790913882}
   - {fileID: 2831237919734505367}
   - {fileID: 9093181670611994050}
@@ -2569,6 +2569,7 @@ MonoBehaviour:
   done: 0
   recipe: {fileID: 8551262460025248636}
   ingredientList: []
+  delayAfterDone: 0
   startTime: 0
   instructions: []
   currentInstruction: 0
@@ -2620,7 +2621,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3782845922507287161}
-  m_Father: {fileID: 471887995549552596}
+  m_Father: {fileID: 2460428938584575803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5476765254144885455
 GameObject:
@@ -3028,6 +3029,7 @@ MonoBehaviour:
   guidelines: []
   sprites:
   - {fileID: 21300000, guid: ffa1bd11b295f8141be84633158d3b75, type: 3}
+  - {fileID: 21300000, guid: ffa1bd11b295f8141be84633158d3b75, type: 3}
   spriteRenderer: {fileID: 5221199950048931767}
   currentGuideline: 0
   done: 0
@@ -3294,7 +3296,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4713735424564383131}
-  m_Father: {fileID: 471887995549552596}
+  m_Father: {fileID: 2460428938584575803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6367185421132934871
 GameObject:
@@ -3792,7 +3794,7 @@ GameObject:
   - component: {fileID: 2831237919734505367}
   - component: {fileID: 8836561534054312017}
   m_Layer: 0
-  m_Name: Set MEDIUM
+  m_Name: 'Instruction: Set MEDIUM'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3834,6 +3836,39 @@ MonoBehaviour:
   duration: 2
   points: 1
   instruction: Set heat to HIGH
+--- !u!1 &7007937476015005623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2460428938584575803}
+  m_Layer: 0
+  m_Name: Initial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2460428938584575803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7007937476015005623}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3230565664695959437}
+  - {fileID: 4093745794293013365}
+  m_Father: {fileID: 471887995549552596}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7624029355468282573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,6 +4979,7 @@ MonoBehaviour:
   done: 0
   recipe: {fileID: 0}
   ingredientList: []
+  delayAfterDone: 2
 --- !u!1 &9031587291956071411
 GameObject:
   m_ObjectHideFlags: 0

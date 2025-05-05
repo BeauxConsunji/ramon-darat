@@ -14,6 +14,7 @@ public class Minigame : MonoBehaviour
     public bool done = false;
     public Recipe recipe;
     public List<GameObject> ingredientList = new List<GameObject>();
+    public float delayAfterDone = 2.0f;
 
 
     // Start is called before the first frame update
@@ -27,34 +28,29 @@ public class Minigame : MonoBehaviour
 
     }
 
-    public virtual void IngredientDone(GameObject i) {
-        // i.SetActive(false);
-        if (ingredientList.Contains(i)) {
-            ingredientList.Remove(i);
-            MarkCompleted();
-        }
-    }
-
-    // public virtual void MarkCompleted() {
-    //     if (done) return;
-    //     if (recipe != null) {
-    //         done = true;
-    //         recipe.NextMinigame();
-    //     }
-    // }
-
-        public virtual void MarkCompleted() {
+    public virtual void MarkCompleted(GameObject i=null) {
         if (done) return;
-        if (recipe != null) {
-            if (ingredientList.Count == 0) {
-                StartCoroutine(FinishMinigame());
+        if (i != null) { // Guideline Minigame
+            if (ingredientList.Contains(i)) {
+                ingredientList.Remove(i);
+                if (recipe != null) {
+                    if (ingredientList.Count == 0) {
+                        StartCoroutine(FinishMinigame());
+                    }
+                }
+            }
+        } else { // Measurable Minigame
+            if (recipe != null) {
+                done = true;
+                recipe.NextMinigame();
             }
         }
     }
 
     IEnumerator FinishMinigame()
     {
-        yield return new WaitForSeconds(2);
+        Debug.Log("Finished Minigame");
+        yield return new WaitForSeconds(delayAfterDone);
         done = true;
         recipe.NextMinigame();
     }
