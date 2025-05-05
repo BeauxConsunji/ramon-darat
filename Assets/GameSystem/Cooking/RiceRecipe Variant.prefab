@@ -587,6 +587,7 @@ MonoBehaviour:
   gameObjectId: {fileID: 607740227397456917}
   done: 0
   recipe: {fileID: 0}
+  ingredientList: []
 --- !u!1 &1007941748680401854
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +805,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 8d0027d8d71780e4baa9a03b7b18863d, type: 3}
   boxCollider: {fileID: 5771635272724610732}
   spriteRenderer: {fileID: 2098802376177934658}
+  isDragged: 0
 --- !u!1 &1042963614532299511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1524,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 2290d0522623622429fb6485bcd8079a, type: 3}
   boxCollider: {fileID: 1758431188943852437}
   spriteRenderer: {fileID: 2307595770061253959}
+  isDragged: 0
 --- !u!1 &2440364011009213127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,6 +1717,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 1826cac92bb61464ea4ba4247522fdfc, type: 3}
   boxCollider: {fileID: 2764392937118857278}
   spriteRenderer: {fileID: 5572545285686634827}
+  isDragged: 0
 --- !u!1 &2691206762480247855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1843,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 57660e069c819f340ac03f2fe8eeecd9, type: 3}
   boxCollider: {fileID: 2095087443585101150}
   spriteRenderer: {fileID: 2698279702514357132}
+  isDragged: 0
 --- !u!1 &2749708242269271338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,6 +2568,7 @@ MonoBehaviour:
   gameObjectId: {fileID: 488252176862903236}
   done: 0
   recipe: {fileID: 8551262460025248636}
+  ingredientList: []
   startTime: 0
   instructions: []
   currentInstruction: 0
@@ -3075,6 +3081,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guidelines: []
   sprites:
+  - {fileID: 21300000, guid: aae99831c5933b741940d04211c65910, type: 3}
+  - {fileID: 21300000, guid: 1b17de9fe8d020942ae3a55a59a23942, type: 3}
+  - {fileID: 21300000, guid: 3aed30eb5d042e744848a58a2f791dd2, type: 3}
   - {fileID: 21300000, guid: aae99831c5933b741940d04211c65910, type: 3}
   - {fileID: 21300000, guid: 1b17de9fe8d020942ae3a55a59a23942, type: 3}
   - {fileID: 21300000, guid: 3aed30eb5d042e744848a58a2f791dd2, type: 3}
@@ -4934,6 +4943,7 @@ MonoBehaviour:
   gameObjectId: {fileID: 5187032608077078177}
   done: 0
   recipe: {fileID: 0}
+  ingredientList: []
 --- !u!1 &9031587291956071411
 GameObject:
   m_ObjectHideFlags: 0
