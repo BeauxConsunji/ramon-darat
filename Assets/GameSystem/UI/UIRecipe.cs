@@ -26,18 +26,20 @@ public class UIRecipe : UIView<UIRecipeState>
     public TMPro.TextMeshProUGUI name;
     public TMPro.TextMeshProUGUI description;
     public Image img;
+    public GameObject lockedSprite;
 
     // TODO: sprite for locked
     public override void ApplyNewStateInternal() {
-        name.text = state.name;
-        description.text = state.description;
+        name.text = state.locked ? "??????" : state.name;
+        description.text = state.locked ? "??????" : state.description;
         img.sprite = state.thumbnail;
 
-        // TODO: lockedSprite.SetActive(state.locked);
+        lockedSprite.SetActive(state.locked);
     }
 
     public void SelectRecipe() {
         Debug.Log("Clicked");
+        if (state.locked) return;
         G.UI.uiType = UIType.LoadingScreen;
         G.UI.recipe = state;
         G.UI.recipe.MarkModified();
