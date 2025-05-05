@@ -141,25 +141,32 @@ public class UIMain : UIView<UIMainState> {
                                             description = "Simple, warm and filling - A staple in every filipino meal. Can you really call it a meal without it?",
                                             thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"),
                                             finalImage = Resources.Load<Sprite>("Sprite/Food/rice_final"),
-                                            gameObjectId="RiceRecipe", locked=false},
+                                            gameObjectId="RiceRecipe", 
+                                            locked=false
+                                        },
                     new UIRecipeState() { name = "Adobo",
                                             description = "The Philippines’ unofficial national dish. Rich, savory, and deeply comforting — a Filipino classic that tastes like home.",
                                             thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-adobo"),
                                             finalImage = Resources.Load<Sprite>("Sprite/Food/adobo_final"),
-                                            gameObjectId="AdoboRecipe", locked=false},
+                                            gameObjectId="AdoboRecipe"
+                                        },
                     new UIRecipeState() { name = "Pinakbet",
                                             description = "A traditional Filipino vegetable stew— healthy, hearty, and bursting with flavor.",
                                             finalImage = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"),
-                                            thumbnail = Resources.Load<Sprite>("Sprite/Food/adobo_final")},
+                                            thumbnail = Resources.Load<Sprite>("Sprite/Food/adobo_final")
+                                        },
                     new UIRecipeState() { name = "Sinigang",
                                             description = "Maasim",
-                                            thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                                            thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")
+                                        },
                     new UIRecipeState() { name = "Kare-Kare",
                                             description = "Peanut Butter",
-                                            thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                                            thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")
+                                        },
                     new UIRecipeState() { name = "Halo-Halo",
                                             description = "Matamis",
-                                            thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
+                                            thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")
+                                        },
 
                     // new UIRecipeState { name = "Adobo"}
                 } 
