@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   loadingScreenText: 'Drag your cursor along the guidelines to wash the rice. '
-  loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
+  loadingScreenImage: {fileID: 21300000, guid: 4237f699cbc675140ae6ec1e5bcf2eac, type: 3}
   gameObjectId: {fileID: 607740227397456917}
   done: 0
   recipe: {fileID: 0}
@@ -2573,7 +2573,7 @@ MonoBehaviour:
   type: 2
   loadingScreenText: 'Use the cursor to drag around the necessary elements according
     to the instructions shown in the slider in order to cook the rice.   '
-  loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
+  loadingScreenImage: {fileID: 21300000, guid: 4237f699cbc675140ae6ec1e5bcf2eac, type: 3}
   gameObjectId: {fileID: 488252176862903236}
   done: 0
   recipe: {fileID: 8551262460025248636}
@@ -4982,7 +4982,7 @@ MonoBehaviour:
   loadingScreenText: Drag the rice cup to the sack to collect 2 cups of rice using
     the C Key and drag the pitcher to pour water using the SPACE bar. Make sure the
     water level reaches the guideline
-  loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
+  loadingScreenImage: {fileID: 21300000, guid: 4237f699cbc675140ae6ec1e5bcf2eac, type: 3}
   gameObjectId: {fileID: 5187032608077078177}
   done: 0
   recipe: {fileID: 0}
