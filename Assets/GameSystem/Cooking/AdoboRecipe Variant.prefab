@@ -1667,6 +1667,7 @@ Transform:
   - {fileID: 917254867451289704}
   - {fileID: 4001834184822302655}
   - {fileID: 5602310914680931044}
+  - {fileID: 1025922855047173218}
   - {fileID: 2680720482652118740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6037,6 +6038,72 @@ MonoBehaviour:
   timingMinigame: {fileID: 0}
   isDragged: 0
   setColliderFromSprite: 1
+--- !u!1001 &829525658178533053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 143631886701342411}
+    m_Modifications:
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651166629049912435, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: m_Name
+      value: AdoboVinegarMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189413097723195290, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+      propertyPath: ids.Array.data[0]
+      value: AdoboMeasurableMinigame
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+--- !u!4 &1025922855047173218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 414294152860607199, guid: 0368fb9b0ba642f448a92f79d27ee795, type: 3}
+  m_PrefabInstance: {fileID: 829525658178533053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1190189857442270299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6047,7 +6114,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5651681485023846419, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
       propertyPath: m_Name
-      value: AdoboMeasurableMinigame
+      value: AdoboSoySauceMinigame
       objectReference: {fileID: 0}
     - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
       propertyPath: m_LocalPosition.x
