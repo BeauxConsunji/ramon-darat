@@ -1,0 +1,2 @@
+# Ramon Darat
+Ramon Darat is a cooking video game simulator with a twist where the player controls a rat (Ramon Darat) who in turn, controls a human in order to cook a full-course Filipino meal . This game targets players who are interested in cooking by giving an accurate list of ingredients and step-by-step procedures required for each featured recipe. Gameplay primarily uses a mouse and two keyboard keys to navigate and interact with various kitchen elements. 
