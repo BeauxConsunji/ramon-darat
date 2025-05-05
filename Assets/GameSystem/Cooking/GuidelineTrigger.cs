@@ -27,7 +27,7 @@ public class GuidelineTrigger : MonoBehaviour
     }
     public void Update() {
 
-        if (correctTool == Draggable.Type.None && !currentDraggable.isDragged && Input.GetMouseButton(0) && IsTouchingMouse()) {
+        if (correctTool == Draggable.Type.None && (currentDraggable == null || (currentDraggable != null && !currentDraggable.isDragged)) && Input.GetMouseButton(0) && IsTouchingMouse()) {
             guideline.MarkTriggerAsCompleted(transform);
         }
     }

@@ -569,6 +569,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 1826cac92bb61464ea4ba4247522fdfc, type: 3}
   boxCollider: {fileID: 424101460645914942}
   spriteRenderer: {fileID: 7992208028440361035}
+  isDragged: 0
 --- !u!1 &257468033376111588
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +695,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 2290d0522623622429fb6485bcd8079a, type: 3}
   boxCollider: {fileID: 4312369727585387157}
   spriteRenderer: {fileID: 268409010773212231}
+  isDragged: 0
 --- !u!1 &402865051422893098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1137,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 57660e069c819f340ac03f2fe8eeecd9, type: 3}
   boxCollider: {fileID: 4516143254685760606}
   spriteRenderer: {fileID: 490216869325996684}
+  isDragged: 0
 --- !u!1 &620138314916672419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1347,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 2abc40f15926098498f684b5412cc1e8, type: 3}
   boxCollider: {fileID: 7161238533332261678}
   spriteRenderer: {fileID: 4342618969060639279}
+  isDragged: 0
 --- !u!1 &749967871365691904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,7 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1edf21f0c1c2e4a9457227cc050d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctTool: 3
+  correctTool: 0
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
@@ -3336,6 +3340,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 8d0027d8d71780e4baa9a03b7b18863d, type: 3}
   boxCollider: {fileID: 8333727499150831532}
   spriteRenderer: {fileID: 4512570641387597890}
+  isDragged: 0
 --- !u!1 &3605813388566524681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,6 +4263,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 2abc40f15926098498f684b5412cc1e8, type: 3}
   boxCollider: {fileID: 2373774189921195621}
   spriteRenderer: {fileID: 7453425183366115155}
+  isDragged: 0
 --- !u!1 &4534199329255815467
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,7 +5531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1edf21f0c1c2e4a9457227cc050d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctTool: 3
+  correctTool: 0
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
@@ -7237,7 +7243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1edf21f0c1c2e4a9457227cc050d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctTool: 3
+  correctTool: 0
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
@@ -7446,7 +7452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1edf21f0c1c2e4a9457227cc050d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctTool: 3
+  correctTool: 0
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
@@ -7713,7 +7719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1edf21f0c1c2e4a9457227cc050d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctTool: 3
+  correctTool: 0
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
@@ -8558,7 +8564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1edf21f0c1c2e4a9457227cc050d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctTool: 3
+  correctTool: 0
   lineRenderer: {fileID: 0}
   triggerPrefab: {fileID: 4615961280428780955, guid: d3a7ac5e1a143d5459404e484c56d4a5, type: 3}
   done: 0
@@ -8846,6 +8852,7 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 2abc40f15926098498f684b5412cc1e8, type: 3}
   boxCollider: {fileID: 4757132496591673440}
   spriteRenderer: {fileID: 5875824151610558368}
+  isDragged: 0
 --- !u!1 &8872218573755754472
 GameObject:
   m_ObjectHideFlags: 0
