@@ -140,7 +140,7 @@ public class UIMain : UIView<UIMainState> {
                     new UIRecipeState() { name = "Rice",
                                             description = "Simple, warm and filling - A staple in every filipino meal. Can you really call it a meal without it?",
                                             thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"),
-                                            finalImage = Resources.Load<Sprite>("Sprite/Food/adobo_final"),
+                                            finalImage = Resources.Load<Sprite>("Sprite/Food/rice_final"),
                                             gameObjectId="RiceRecipe", locked=false},
                     new UIRecipeState() { name = "Adobo",
                                             description = "The Philippines’ unofficial national dish. Rich, savory, and deeply comforting — a Filipino classic that tastes like home.",

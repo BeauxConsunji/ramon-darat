@@ -65,6 +65,7 @@ public class TimingMinigame : Minigame
             if (!instructionIsActive) {
                 done = true;
                 recipe.score = G.UI.timingMinigame.score;
+                recipe.total = G.UI.timingMinigame.total;
                 recipe.NextMinigame();
                 gameObject.SetActive(false);
             }
