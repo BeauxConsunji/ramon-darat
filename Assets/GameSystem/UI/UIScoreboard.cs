@@ -20,11 +20,25 @@ public class UIScoreboard : UIView<UIScoreboardState>
     public override void ApplyNewStateInternal()
     {
         double percentage = Math.Round(state.score*100.0f/state.total);
-
-        scoreText.text = $"{percentage}%";
+        if (percentage >= 93)
+            scoreText.text = "A";
+        else if (percentage >= 87)
+            scoreText.text = "B+";
+        else if (percentage >= 81)
+            scoreText.text = "B";
+        else if (percentage >= 75)
+            scoreText.text = "C+";
+        else if (percentage >= 69)
+            scoreText.text = "C";
+        else if (percentage >= 60)
+            scoreText.text = "D";
+        else
+            scoreText.text = "F";
+            
+        scoreText.text += $" ({percentage}%)";
         
-        Debug.Log("scorussy" + state.score.ToString());
-        Debug.Log("totully" + state.total.ToString());
+        Debug.Log("scorussy " + state.score.ToString());
+        Debug.Log("totully " + state.total.ToString());
         // scoreText.text = state.score.ToString() + "/" + state.total.ToString();
         Debug.Log("Testes");
         if (G.UI.recipe != null && final_food != null)
