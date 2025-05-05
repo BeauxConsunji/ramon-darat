@@ -798,6 +798,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4342618969060639279}
   timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &749967871365691904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigames: []
   score: 0
+  total: 0
 --- !u!1 &2676264061547620468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,7 +2284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  loadingScreenText: Drag the knife to follow the guidelines as they appear
+  loadingScreenText: Drag the knife along the blue guidelines in order to correctly
+    cut. Drag the cursor along the green guidelines to peel the onion skins.
   loadingScreenImage: {fileID: 21300000, guid: 72b8dc509a699cd4198a7ab8f1dfec28, type: 3}
   gameObjectId: {fileID: 4003527627636419597}
   done: 0
@@ -2599,7 +2602,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  loadingScreenText: Drag the knife to follow the guidelines as they appear
+  loadingScreenText: Drag the knife along the blue guidelines in order to correctly
+    cut garlic tips. Drag the cursor along the green guidelines to peel the onion
+    skins.
   loadingScreenImage: {fileID: 21300000, guid: 72b8dc509a699cd4198a7ab8f1dfec28, type: 3}
   gameObjectId: {fileID: 6074213278234337259}
   done: 0
@@ -2727,7 +2732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  loadingScreenText: Drag the knife to follow the guidelines as they appear
+  loadingScreenText: Drag the knife along the guidelines in order to correctly cut
+    the pork.
   loadingScreenImage: {fileID: 21300000, guid: 72b8dc509a699cd4198a7ab8f1dfec28, type: 3}
   gameObjectId: {fileID: 4458468914495315703}
   done: 0
@@ -2861,6 +2867,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7453425183366115155}
   timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &5009225193816666742
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,6 +6036,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5875824151610558368}
   timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1001 &1190189857442270299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6040,10 +6048,6 @@ PrefabInstance:
     - target: {fileID: 5651681485023846419, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
       propertyPath: m_Name
       value: AdoboMeasurableMinigame
-      objectReference: {fileID: 0}
-    - target: {fileID: 5651681485023846419, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
       propertyPath: m_LocalPosition.x
