@@ -29,8 +29,11 @@ public class Ingredient : MonoBehaviour
         if (done) return;
         if (currentGuideline + 1 >= guidelines.Count) {
             done = true;
+            guidelines[currentGuideline].gameObject.SetActive(false);
+            Debug.Log(guidelines.Count);
+            spriteRenderer.sprite = sprites[guidelines.Count];
             if (minigame != null)
-                minigame.MarkCompleted();
+                minigame.IngredientDone(gameObject);
             return;
         }
         guidelines[currentGuideline].gameObject.SetActive(false);

@@ -18,6 +18,7 @@ public class Draggable : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private int settingsCount;
     private TimingMinigame timingMinigame;
+    public bool isDragged = false;
 
     void Start() {
         Debug.Log("Draggable start");
@@ -37,7 +38,7 @@ public class Draggable : MonoBehaviour
             spriteRenderer.sprite = draggedSprite;
             SetColliderFromSprite();
         }
-
+        isDragged = true;
         dragPlane = new Plane(G.I.mainCamera.transform.forward, transform.position);
         Ray camRay = G.I.mainCamera.ScreenPointToRay(Input.mousePosition);
         float planeDist;
@@ -68,7 +69,7 @@ public class Draggable : MonoBehaviour
             spriteRenderer.sprite = defaultSprite;
             SetColliderFromSprite();
         }
-
+        isDragged = false;
         if (type == Type.Knob) {
             float angle = transform.rotation.eulerAngles.z;
             if (angle == 0.0f)

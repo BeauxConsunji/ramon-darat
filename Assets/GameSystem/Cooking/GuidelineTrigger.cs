@@ -8,6 +8,7 @@ public class GuidelineTrigger : MonoBehaviour
 {
     private Guideline guideline;
     public Draggable.Type correctTool;
+    public Draggable currentDraggable;
     private Collider2D collider;
 
     void Start() {
@@ -16,28 +17,20 @@ public class GuidelineTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (correctTool != Draggable.Type.None) {
-            if (other.TryGetComponent<Draggable>(out var draggable)) {
-                if (draggable.type == guideline.correctTool) {
-                    guideline.MarkTriggerAsCompleted(transform);
-                }   
-            }
+        if (other.TryGetComponent<Draggable>(out var draggable)) {
+            if (correctTool != Draggable.Type.None && draggable.type == guideline.correctTool) {
+                guideline.MarkTriggerAsCompleted(transform);
+            }   
+            currentDraggable = draggable;
         }
 
     }
-
     public void Update() {
 
-        if (Input.GetMouseButton(0) && IsTouchingMouse()) {
+        if (correctTool == Draggable.Type.None && (currentDraggable == null || (currentDraggable != null && !currentDraggable.isDragged)) && Input.GetMouseButton(0) && IsTouchingMouse()) {
             guideline.MarkTriggerAsCompleted(transform);
         }
     }
-    // private void OnMouseDown(){
-    //     if (correctTool == Draggable.Type.None) {
-    //         guideline.MarkTriggerAsCompleted(transform);
-    //         Debug.Log("Dragging like a dragqueen");  
-    //     }           
-    // }
 
     public bool IsTouchingMouse()
     {

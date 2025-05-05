@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UICanvas: {fileID: 4355671464320124243}
-  ui: {fileID: 0}
+  ui: {fileID: 1249622812183486189}
   mainCamera: {fileID: 0}
   controlMode: 0
   controls: {fileID: 0}
@@ -111,6 +111,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cd1c8aab0d4db8498fc98002eeb45ef, type: 3}
+--- !u!114 &1249622812183486189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8402149679641263778, guid: 3cd1c8aab0d4db8498fc98002eeb45ef, type: 3}
+  m_PrefabInstance: {fileID: 7335769843364667471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4355671464320124243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cf6c7adc648ff4aade71a1fdfb1d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1509524793240505153 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8160253159134522126, guid: 3cd1c8aab0d4db8498fc98002eeb45ef, type: 3}
