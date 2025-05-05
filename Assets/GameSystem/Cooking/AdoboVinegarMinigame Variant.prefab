@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6378452842788711520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1361815309976330140, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_Name
+      value: Vinegar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542150092312061285, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.30069745
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542150092312061285, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 1.0132039
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316744966305529898, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2272e14ee55cc464dbfcff20a7e984d8, type: 3}
+    - target: {fileID: 3316744966305529898, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: draggedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2272e14ee55cc464dbfcff20a7e984d8, type: 3}
+    - target: {fileID: 4221956888805619761, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344808330481008822, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 69076d5c19b65714182c79329674557a, type: 3}
+    - target: {fileID: 5478665233494949026, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: loadingScreenText
+      value: "Drag the white vinegar bottle to the bowl and pour it up to \u2153
+        of it in the bowl. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651681485023846419, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_Name
+      value: AdoboVinegarMinigame Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556107188578629077, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6580763dd569f714fa8fd57b6075aad9, type: 3}
+    - target: {fileID: 7795970524936162283, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2272e14ee55cc464dbfcff20a7e984d8, type: 3}
+    - target: {fileID: 8267916484697720939, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_Name
+      value: PouringVinegar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414909110772073466, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: ids.Array.data[0]
+      value: AdoboVinegarMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167825907808460692, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_Name
+      value: VinegarGuide
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}

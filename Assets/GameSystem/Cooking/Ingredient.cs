@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(AudioSource))]
 public class Ingredient : MonoBehaviour
 {
     public List<Transform> guidelines;
@@ -11,6 +11,8 @@ public class Ingredient : MonoBehaviour
     public bool done = false;
     public Minigame minigame; // drag the component in unity inspector
     public Transform guidelineContainer;
+    // sound effects
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -23,10 +25,16 @@ public class Ingredient : MonoBehaviour
         
         if (sprites.Count > 0)
             spriteRenderer.sprite = sprites[0];
+
+        audioSource = GetComponent<AudioSource>();
+        
     } 
 
     public void MarkGuidelineAsCompleted() {
         if (done) return;
+        // play sound here
+        
+        audioSource.Play();
         if (currentGuideline + 1 >= guidelines.Count) {
             done = true;
             guidelines[currentGuideline].gameObject.SetActive(false);
