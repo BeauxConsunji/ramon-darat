@@ -304,8 +304,8 @@ BoxCollider2D:
   m_Offset: {x: 0.4977063, y: -3.9201634}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.8498987, y: 0.8155619}
-    oldSize: {x: 22.25, y: 12.5}
+    pivot: {x: 0.2958378, y: 1.0082209}
+    oldSize: {x: 3.125, y: 7.5}
     newSize: {x: 22.25, y: 12.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -359,7 +359,9 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 02add0cc8f2fa9044b4de8671f3bb73d, type: 3}
   boxCollider: {fileID: 1542150092312061285}
   spriteRenderer: {fileID: 7795970524936162283}
+  timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &1518598179915147377
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +853,9 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 8d0027d8d71780e4baa9a03b7b18863d, type: 3}
   boxCollider: {fileID: 7143622012719899639}
   spriteRenderer: {fileID: 3322451771168472089}
+  timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &4705562521916645458
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,12 +1000,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  loadingScreenText: Pour the water to the right level and put 2 cups of rice
+  loadingScreenText: "Drag the soy sauce bottle to the bowl to pour up to \u2154
+    of the cup. Drag the white vinegar bottle to the bowl and pour it up to \u2153
+    of it in the bowl. "
   loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
   gameObjectId: {fileID: 8414909110772073466}
   done: 0
   recipe: {fileID: 0}
   ingredientList: []
+  delayAfterDone: 2
 --- !u!1 &6394627990075945355
 GameObject:
   m_ObjectHideFlags: 0

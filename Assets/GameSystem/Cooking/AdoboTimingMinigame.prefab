@@ -4196,7 +4196,7 @@ MonoBehaviour:
   targetHeatLevel: 0
   startTime: 14
   duration: 4
-  points: 1
+  points: 0
   instruction: Marinate (wait ~ )
 --- !u!1 &5274056381313494132
 GameObject:
@@ -6866,7 +6866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  loadingScreenText: Follow the instructions at the right time
+  loadingScreenText: Follow the instructions and execute them in the correct timing
+    and order. Dragging and adjusting the cooking knob are the only available actions.
   loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
   gameObjectId: {fileID: 4196035108540705704}
   done: 0

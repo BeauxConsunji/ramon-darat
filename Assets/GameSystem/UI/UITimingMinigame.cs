@@ -29,9 +29,6 @@ public class UITimingMinigame : UIView<UITimingMinigameState>
     void Start()
     {
         Debug.Log(pixelsPerSecond);
-        foreach (var instruction in state.instructions) {
-            state.total += instruction.points;
-        }
         // currentTimeLine.anchoredPosition = new Vector2(offset, 0.0f);
         pixelsPerSecond = timeline.rect.width / widthInSeconds;
     }
