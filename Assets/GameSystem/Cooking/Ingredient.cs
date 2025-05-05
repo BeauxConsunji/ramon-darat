@@ -33,7 +33,7 @@ public class Ingredient : MonoBehaviour
             Debug.Log(guidelines.Count);
             spriteRenderer.sprite = sprites[guidelines.Count];
             if (minigame != null)
-                minigame.IngredientDone(gameObject);
+                minigame.MarkCompleted(gameObject);
             return;
         }
         guidelines[currentGuideline].gameObject.SetActive(false);

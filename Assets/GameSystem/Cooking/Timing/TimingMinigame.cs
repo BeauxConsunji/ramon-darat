@@ -59,6 +59,7 @@ public class TimingMinigame : Minigame
     }
 
     public void NextInstruction() {
+        Debug.Log("Next Instruction");
         if (currentInstruction + 1 >= instructions.Count) {
             done = true;
             recipe.score = G.UI.timingMinigame.score;
@@ -70,10 +71,11 @@ public class TimingMinigame : Minigame
         currentInstruction++;
     }
 
-    public override void MarkCompleted() {
+    public override void MarkCompleted(GameObject i=null) {
         if (done) return;
         
         if (instructionIsActive) {
+            Debug.Log("MarkCompleted");
             G.UI.timingMinigame.score++;
             G.UI.timingMinigame.MarkModified();
             NextInstruction();
