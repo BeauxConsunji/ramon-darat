@@ -152,7 +152,7 @@ public class UIMain : UIView<UIMainState> {
                                         },
                     new UIRecipeState() { name = "Pinakbet",
                                             description = "A traditional Filipino vegetable stew— healthy, hearty, and bursting with flavor.",
-                                            finalImage = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"),
+                                            finalImage = Resources.Load<Sprite>("Thumbnails/recipe-selection-pinakbet"),
                                             thumbnail = Resources.Load<Sprite>("Sprite/Food/adobo_final")
                                         },
                     new UIRecipeState() { name = "Sinigang",
