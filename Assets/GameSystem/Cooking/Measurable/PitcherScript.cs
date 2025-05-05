@@ -21,6 +21,7 @@ public class PitcherScript : MonoBehaviour
     void FixedUpdate()
     {
         Debug.Log("IS PRESSED: " + isPressed);
+        Debug.Log("CAN POUR: " + canPour);
         // pouring
         if (canPour)
         {
@@ -56,13 +57,18 @@ public class PitcherScript : MonoBehaviour
         {
             canPour = true;
             Debug.Log("u can pour now");
-        }
+        } //else
+        //{
+        //    Debug.Log("YOU CAN'T POUR");
+        //    canPour = false;
+        //}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.name == "PouringAreaTrigger")
         {
+            Debug.Log("YOU CAN'T POUR");
             canPour = false;
         }
     }
