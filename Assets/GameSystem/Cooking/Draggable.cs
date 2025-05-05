@@ -58,7 +58,7 @@ public class Draggable : MonoBehaviour
             var angle = 360 * (1f - (dragNormalized + 1f) / 2f);
 
             transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
-            Debug.Log(transform.rotation.eulerAngles.z);
+            // Debug.Log(transform.rotation.eulerAngles.z);
             
         } else {
             transform.position = dragPoint + offset;
@@ -85,7 +85,7 @@ public class Draggable : MonoBehaviour
             else {
                 settingIndex = 1;
             }
-            Debug.Log("Set Heat Level to " + ((HeatLevel)(settingIndex)).ToString());
+            
             if (timingMinigame != null)
                 timingMinigame.ChangeHeatLevel((HeatLevel)(settingIndex));
         }

@@ -135,7 +135,7 @@ public class UIMain : UIView<UIMainState> {
             recipeSelector = new UIRecipeSelectorState() {
                 recipes = new List<UIRecipeState>() {
                     // TODO: Remove later
-                    new UIRecipeState() { name = "Sample", description = "Sample", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="SampleRecipe"},
+                    // new UIRecipeState() { name = "Sample", description = "Sample", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="SampleRecipe"},
                     
                     new UIRecipeState() { name = "Rice", description = "staple", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="RiceRecipe"},
                     new UIRecipeState() { name = "Adobo", description = "Manok", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="AdoboRecipe"},
