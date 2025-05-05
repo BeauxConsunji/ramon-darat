@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
@@ -18,8 +19,10 @@ public class UIScoreboard : UIView<UIScoreboardState>
     // Start is called before the first frame update
     public override void ApplyNewStateInternal()
     {
-        double percentage = state.score * 100.0f /state.total;
+        double percentage = Math.Round(state.score*100.0f/state.total);
+
         scoreText.text = $"{percentage}%";
+        
         Debug.Log("scorussy" + state.score.ToString());
         Debug.Log("totully" + state.total.ToString());
         // scoreText.text = state.score.ToString() + "/" + state.total.ToString();
