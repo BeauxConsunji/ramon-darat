@@ -2413,10 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebf055f6684305488053510a67c9ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigames:
-  - {fileID: 802269132860549162}
-  - {fileID: 1913511764444067350}
-  - {fileID: 8007000942446588524}
+  minigames: []
   score: 0
 --- !u!1 &2676264061547620468
 GameObject:
