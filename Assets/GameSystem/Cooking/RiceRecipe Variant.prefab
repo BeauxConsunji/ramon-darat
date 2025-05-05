@@ -4979,10 +4979,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  loadingScreenText: 'Drag the rice cup to the grain sack to collect 2 cups of rice
-    using the C Key and drag the pitcher to pour rice into the rice cooker using
-    the SPACE bar. Make sure the water reaches the specified amount according to
-    the guideline. '
+  loadingScreenText: Drag the rice cup to the sack to collect 2 cups of rice using
+    the C Key and drag the pitcher to pour water using the SPACE bar. Make sure the
+    water level reaches the guideline
   loadingScreenImage: {fileID: 21300000, guid: 1abeb275edd131540b7a638b3a7873b7, type: 3}
   gameObjectId: {fileID: 5187032608077078177}
   done: 0
