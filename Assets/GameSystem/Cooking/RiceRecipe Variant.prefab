@@ -536,7 +536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2166956740548188808
 Transform:
   m_ObjectHideFlags: 0
@@ -3794,7 +3794,7 @@ GameObject:
   - component: {fileID: 2831237919734505367}
   - component: {fileID: 8836561534054312017}
   m_Layer: 0
-  m_Name: 'Instruction: Set MEDIUM'
+  m_Name: 'Instruction: Set HIGH'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3831,7 +3831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  targetHeatLevel: 2
+  targetHeatLevel: 3
   startTime: 12
   duration: 2
   points: 1
@@ -4920,7 +4920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7926553781457556452
 Transform:
   m_ObjectHideFlags: 0

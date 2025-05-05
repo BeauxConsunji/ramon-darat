@@ -67,6 +67,7 @@ public class TimingMinigame : Minigame
             gameObject.SetActive(false);
             return;
         }
+        instructionIsActive = false;
         instructions[currentInstruction].gameObject.SetActive(false);
         currentInstruction++;
     }
@@ -86,11 +87,11 @@ public class TimingMinigame : Minigame
     public void ChangeHeatLevel(HeatLevel heatLevel) {
         if (this.heatLevel == heatLevel)
             return;
-        
+        Debug.Log("Set Heat Level to " + heatLevel.ToString());
         var instruction = instructions[currentInstruction];
         this.heatLevel = heatLevel;
         if (instruction.type == TimingInstruction.Type.Heat && instruction.targetHeatLevel == heatLevel) {
-            base.MarkCompleted();
+            MarkCompleted();
         }
     }
 }
