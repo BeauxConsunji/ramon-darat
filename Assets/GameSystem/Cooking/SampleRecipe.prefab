@@ -183,6 +183,14 @@ PrefabInstance:
       propertyPath: recipe
       value: 
       objectReference: {fileID: 318231815487410258}
+    - target: {fileID: 2562061177812826032, guid: 8b9697125bc939a46835908021cecd06, type: 3}
+      propertyPath: m_Size.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562061177812826032, guid: 8b9697125bc939a46835908021cecd06, type: 3}
+      propertyPath: m_Size.y
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 4884804632363304043, guid: 8b9697125bc939a46835908021cecd06, type: 3}
       propertyPath: m_Name
       value: SampleTimingMinigame

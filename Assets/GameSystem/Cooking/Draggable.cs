@@ -7,7 +7,7 @@ public enum HeatLevel {None, Low, Medium, High};
 [RequireComponent(typeof(BoxCollider2D))]
 public class Draggable : MonoBehaviour
 {
-    public enum Type { None, Knife, Stirrer, Skin, Ingredient, Knob, RiceCup, PotCover }
+    public enum Type { None, Knife, Stirrer, Skin, Ingredient, Knob, RiceCup, PotCover, Pork, Sauce, Oil, Garlic, Onion, Water, Spatula }
     public Type type = Type.None;
     public float knobRange = 2.0f;
     private Plane dragPlane;
@@ -17,7 +17,7 @@ public class Draggable : MonoBehaviour
     public BoxCollider2D boxCollider;
     public SpriteRenderer spriteRenderer;
     private int settingsCount;
-    private TimingMinigame timingMinigame;
+    public TimingMinigame timingMinigame;
     public bool isDragged = false;
 
     void Start() {

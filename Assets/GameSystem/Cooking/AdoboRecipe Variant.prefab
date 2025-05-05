@@ -2233,7 +2233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5410421128322905180
 Transform:
   m_ObjectHideFlags: 0
@@ -2287,6 +2287,7 @@ MonoBehaviour:
   done: 0
   recipe: {fileID: 0}
   ingredientList: []
+  delayAfterDone: 2
 --- !u!1 &3605813388566524681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,7 +2549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &917254867451289704
 Transform:
   m_ObjectHideFlags: 0
@@ -2603,6 +2604,7 @@ MonoBehaviour:
   done: 0
   recipe: {fileID: 0}
   ingredientList: []
+  delayAfterDone: 2
 --- !u!1 &4406832912793541728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,7 +2679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4001834184822302655
 Transform:
   m_ObjectHideFlags: 0
@@ -2730,6 +2732,7 @@ MonoBehaviour:
   done: 0
   recipe: {fileID: 0}
   ingredientList: []
+  delayAfterDone: 2
 --- !u!1 &4453776988871896458
 GameObject:
   m_ObjectHideFlags: 0
@@ -6034,6 +6037,10 @@ PrefabInstance:
     - target: {fileID: 5651681485023846419, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
       propertyPath: m_Name
       value: AdoboMeasurableMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651681485023846419, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6717980065206324927, guid: 29e708e1d7bd6a14f93bb87451cd3c1c, type: 3}
       propertyPath: m_LocalPosition.x
