@@ -61,10 +61,12 @@ public class TimingMinigame : Minigame
     public void NextInstruction() {
         Debug.Log("Next Instruction");
         if (currentInstruction + 1 >= instructions.Count) {
-            done = true;
-            recipe.score = G.UI.timingMinigame.score;
-            recipe.NextMinigame();
-            gameObject.SetActive(false);
+            if (!instructionIsActive) {
+                done = true;
+                recipe.score = G.UI.timingMinigame.score;
+                recipe.NextMinigame();
+                gameObject.SetActive(false);
+            }
             return;
         }
         instructionIsActive = false;
