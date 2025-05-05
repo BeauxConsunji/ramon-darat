@@ -16,6 +16,7 @@ public class UIScoreboard : UIView<UIScoreboardState>
         scoreText.text = state.score.ToString();
     }
     public void Done() {
+        G.UI.recipeSelector.UnlockNextRecipe();
         G.UI.uiType = UIType.RecipeSelector;
         G.UI.MarkModified();
         G.UI.recipe = null;

@@ -7,7 +7,15 @@ public class UIRecipeSelectorState : UIState {
     // do list of recipes here here
     // modify here 
     public List<UIRecipeState> recipes = new List<UIRecipeState>();
-    
+    public int currentRecipe = 0;
+    public void UnlockNextRecipe() {
+        if (currentRecipe + 1 >= recipes.Count)
+            return;
+        currentRecipe++;
+        recipes[currentRecipe].locked = false;
+        recipes[currentRecipe].MarkModified();
+        G.UI.recipeSelector.MarkModified();
+    }
 }
 
 public class UIRecipeSelector : UIView<UIRecipeSelectorState>
