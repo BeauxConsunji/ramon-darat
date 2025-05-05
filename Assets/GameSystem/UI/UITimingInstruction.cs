@@ -13,6 +13,7 @@ public class UITimingInstructionState : UIState {
     public float pixelsPerSecond;
     public bool done = false;
     public TimingInstruction.Type type = TimingInstruction.Type.None;
+    public int points = 1;
 }
 
 public class UITimingInstruction : UIView<UITimingInstructionState>

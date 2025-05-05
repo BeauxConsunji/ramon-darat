@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UITimingMinigameState : UIMinigameState {
     public List<UITimingInstructionState> instructions = new List<UITimingInstructionState>();
     public int score;
+    public int total;
     public float startTime;
     public void AddInstruction(UITimingInstructionState instruction) {
         instructions.Add(instruction);
@@ -28,6 +29,9 @@ public class UITimingMinigame : UIView<UITimingMinigameState>
     void Start()
     {
         Debug.Log(pixelsPerSecond);
+        foreach (var instruction in state.instructions) {
+            state.total += instruction.points;
+        }
         // currentTimeLine.anchoredPosition = new Vector2(offset, 0.0f);
         pixelsPerSecond = timeline.rect.width / widthInSeconds;
     }

@@ -6,6 +6,7 @@ public class Recipe : MonoBehaviour
 {
     public List<Minigame> minigames = new List<Minigame>();
     public int score = 0;
+    public int total = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +38,10 @@ public class Recipe : MonoBehaviour
             G.UI.recipe.done = true;
             G.UI.uiType = UIType.Scoreboard;
             G.UI.scoreboard.score = score;
+            G.UI.scoreboard.total = total;
             G.UI.scoreboard.MarkModified();
             G.UI.MarkModified();
-            G.UI.recipe = null;
+            // G.UI.recipe = null;
             gameObject.SetActive(false);
             return;
         }
