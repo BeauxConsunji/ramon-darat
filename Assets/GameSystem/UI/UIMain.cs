@@ -138,7 +138,7 @@ public class UIMain : UIView<UIMainState> {
                     // new UIRecipeState() { name = "Sample", description = "Sample", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="SampleRecipe"},
                     
                     new UIRecipeState() { name = "Rice", description = "Simple, warm and filling - A staple in every filipino meal. Can you really call it a meal without it?", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice"), gameObjectId="RiceRecipe", locked=false},
-                    new UIRecipeState() { name = "Adobo", description = "The Philippines’ unofficial national dish. Rich, savory, and deeply comforting — a Filipino classic that tastes like home.", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-adobo"), gameObjectId="AdoboRecipe"},
+                    new UIRecipeState() { name = "Adobo", description = "The Philippines’ unofficial national dish. Rich, savory, and deeply comforting — a Filipino classic that tastes like home.", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-adobo"), gameObjectId="AdoboRecipe", locked=false},
                     new UIRecipeState() { name = "Pinakbet", description = "A traditional Filipino vegetable stew— healthy, hearty, and bursting with flavor.", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Sinigang", description = "Maasim", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
                     new UIRecipeState() { name = "Kare-Kare", description = "Peanut Butter", thumbnail = Resources.Load<Sprite>("Thumbnails/recipe-selection-rice")},
