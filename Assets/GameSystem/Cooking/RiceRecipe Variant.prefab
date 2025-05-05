@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigames: []
   score: 0
+  total: 0
 --- !u!1 &334835003714671065
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +807,9 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 8d0027d8d71780e4baa9a03b7b18863d, type: 3}
   boxCollider: {fileID: 5771635272724610732}
   spriteRenderer: {fileID: 2098802376177934658}
+  timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &1042963614532299511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,7 +1392,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2499a034af0bc0f4697e3d0a8dc0a108, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ba449b22a3cd5f4ca01cb8e4e17b442, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1525,7 +1528,9 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 2290d0522623622429fb6485bcd8079a, type: 3}
   boxCollider: {fileID: 1758431188943852437}
   spriteRenderer: {fileID: 2307595770061253959}
+  timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &2440364011009213127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1723,9 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 1826cac92bb61464ea4ba4247522fdfc, type: 3}
   boxCollider: {fileID: 2764392937118857278}
   spriteRenderer: {fileID: 5572545285686634827}
+  timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &2691206762480247855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,7 +1851,9 @@ MonoBehaviour:
   draggedSprite: {fileID: 21300000, guid: 57660e069c819f340ac03f2fe8eeecd9, type: 3}
   boxCollider: {fileID: 2095087443585101150}
   spriteRenderer: {fileID: 2698279702514357132}
+  timingMinigame: {fileID: 0}
   isDragged: 0
+  setColliderFromSprite: 1
 --- !u!1 &2749708242269271338
 GameObject:
   m_ObjectHideFlags: 0
