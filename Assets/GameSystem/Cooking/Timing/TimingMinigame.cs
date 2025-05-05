@@ -34,6 +34,7 @@ public class TimingMinigame : Minigame
                 type = instruction.type,
                 points = instruction.points
             }); 
+            G.UI.timingMinigame.total += instruction.points;
         }
         G.UI.MarkModified();
     }
@@ -81,7 +82,7 @@ public class TimingMinigame : Minigame
         
         if (instructionIsActive) {
             Debug.Log("MarkCompleted");
-            G.UI.timingMinigame.score++;
+            G.UI.timingMinigame.score += instructions[currentInstruction].points;
             G.UI.timingMinigame.MarkModified();
             NextInstruction();
         }
